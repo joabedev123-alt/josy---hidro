@@ -62,7 +62,7 @@ heroTl.from('.navbar', {
 }, '-=0.7');
 
 // Scroll Animations
-gsap.utils.toArray('.glass-card').forEach((card, i) => {
+gsap.utils.toArray('.glass-card:not(.diff-card)').forEach((card, i) => {
     gsap.from(card, {
         scrollTrigger: {
             trigger: card,
@@ -231,20 +231,28 @@ const careSwiper = new Swiper('.careSwiper', {
     }
 });
 // Differentials Animation
-gsap.from(".diff-card", {
-    scrollTrigger: {
-        trigger: ".differentials",
-        start: "top 85%",
-        toggleActions: "play none none none"
+gsap.fromTo(".diff-card", 
+    { 
+        y: 100, 
+        opacity: 0, 
+        rotation: 360, 
+        scale: 0.5 
     },
-    y: 100,
-    opacity: 0,
-    rotation: 360, // Giro completo
-    scale: 0.5,
-    duration: 1.5,
-    stagger: 0.3, // Um a um bem definido
-    ease: "back.out(1.2)"
-});
+    {
+        scrollTrigger: {
+            trigger: ".differentials",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        },
+        y: 0,
+        opacity: 1,
+        rotation: 0,
+        scale: 1,
+        duration: 1.5,
+        stagger: 0.3,
+        ease: "back.out(1.2)"
+    }
+);
 
 // Initialize GLightbox
 const lightbox = GLightbox({
