@@ -392,67 +392,10 @@ a {
 }
 
 /* Differentials */
-.differentials {
-    position: relative;
-    overflow: hidden;
-}
-
-.pulse-line-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.25;
-    transform: rotate(-15deg) scale(1.2);
-    transform-origin: center;
-}
-
-.pulse-svg {
-    width: 100%;
-    height: 100%;
-}
-
-.pulse-path {
-    fill: none;
-    stroke: var(--primary);
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    animation: draw-pulse 8s linear infinite;
-    filter: drop-shadow(0 0 8px var(--primary-glow));
-}
-
-.pulse-glow {
-    offset-path: path("M0,1000 L100,900 L150,950 L200,800 L250,900 L300,500 L350,700 L400,200 L450,400 L500,0 L550,300 L600,100 L650,600 L700,400 L750,800 L800,700 L900,1000 L1000,900");
-    animation: move-glow 8s linear infinite;
-    filter: blur(4px) brightness(2);
-}
-
-@keyframes draw-pulse {
-    0% { stroke-dashoffset: 2000; opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { stroke-dashoffset: 0; opacity: 0; }
-}
-
-@keyframes move-glow {
-    0% { offset-distance: 0%; opacity: 0; }
-    5% { opacity: 1; }
-    95% { opacity: 1; }
-    100% { offset-distance: 100%; opacity: 0; }
-}
-
 .differential-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    position: relative;
-    z-index: 1;
 }
 
 .card-icon {
@@ -1166,13 +1109,76 @@ a {
     font-size: 0.9rem;
 }
 
+/* Differentials Section */
+.differential-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 4rem 0;
+}
+
+.diff-card {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    /* Removido opacity: 0 daqui para garantir visibilidade */
+}
+
+/* Efeito de posicionamento alternado (cima/baixo) */
+.diff-card:nth-child(even) {
+    margin-top: 3rem;
+}
+
+.diff-card:nth-child(odd) {
+    margin-bottom: 3rem;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+    background: var(--primary-glow);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2);
+}
+
+.card-icon i {
+    width: 35px;
+    height: 35px;
+    stroke-width: 2.5px;
+}
+
+.diff-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary); /* Cor mais chamativa */
+    text-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+}
+
+.diff-card p {
+    color: rgba(255, 255, 255, 0.9); /* Texto mais claro e nítido */
+    line-height: 1.6;
+}
+
 @media (max-width: 992px) {
-    .tech-grid, .tech-grid.reversed, .fixation-box {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .differential-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .fixation-image {
-        height: 300px;
+    .diff-card:nth-child(even), .diff-card:nth-child(odd) {
+        margin: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .differential-grid {
+        grid-template-columns: 1fr;
     }
 }
 

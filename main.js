@@ -1,4 +1,4 @@
-import { createIcons, Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones, Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock } from 'lucide';
+import { createIcons, Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones, Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Diamond, ThermometerSun, ShieldSun } from 'lucide';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -17,7 +17,7 @@ const lenis = new Lenis({
 createIcons({
     icons: {
         Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones,
-        Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock
+        Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Diamond, ThermometerSun, ShieldSun
     }
 });
 
@@ -240,17 +240,19 @@ const careSwiper = new Swiper('.careSwiper', {
         }
     }
 });
-// Differentials Sequential Reveal
+// Differentials Animation
 gsap.from(".diff-card", {
     scrollTrigger: {
         trigger: ".differentials",
-        start: "top 80%",
+        start: "top 90%", // Gatilho mais sensível
+        toggleActions: "play none none none"
     },
-    y: 50,
+    y: 60,
     opacity: 0,
-    duration: 1,
-    stagger: 0.3,
-    ease: "power3.out"
+    rotationY: 180,
+    duration: 1.5,
+    stagger: 0.2,
+    ease: "back.out(1.7)"
 });
 
 // Initialize GLightbox
