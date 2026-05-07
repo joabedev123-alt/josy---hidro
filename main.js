@@ -13,13 +13,6 @@ const lenis = new Lenis({
     smoothWheel: true,
 });
 
-// Initialize Lucide Icons
-createIcons({
-    icons: {
-        Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones,
-        Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Diamond, ThermometerSun, ShieldSun
-    }
-});
 
 function raf(time) {
     lenis.raf(time);
@@ -261,6 +254,14 @@ const lightbox = GLightbox({
     touchNavigation: true,
     loop: true,
     autoplayVideos: true
+});
+
+// Initialize Lucide Icons (at the end for better reliability)
+createIcons({
+    icons: {
+        Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones,
+        Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Diamond, ThermometerSun, ShieldSun
+    }
 });
 
 // Initialize Maintenance Visual Carousel (Swiper)

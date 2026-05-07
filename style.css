@@ -1140,19 +1140,38 @@ a {
     width: 80px;
     height: 80px;
     margin: 0 auto 2rem;
-    background: var(--primary-glow);
-    border-radius: 20px;
+    background: var(--primary); /* Azul sólido */
+    border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2);
+    color: #ffffff; /* Ícones em branco para contraste total */
+    box-shadow: 0 15px 35px rgba(0, 85, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: 0.6s;
+}
+
+.diff-card:hover .card-icon::after {
+    transform: translateX(100%);
 }
 
 .card-icon i {
-    width: 35px;
-    height: 35px;
-    stroke-width: 2.5px;
+    width: 38px;
+    height: 38px;
+    stroke-width: 2.2px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.5)); /* Brilho no ícone */
 }
 
 .diff-card h3 {
