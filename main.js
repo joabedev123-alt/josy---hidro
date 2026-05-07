@@ -233,10 +233,11 @@ const careSwiper = new Swiper('.careSwiper', {
 // Differentials Animation
 gsap.fromTo(".diff-card", 
     { 
-        y: 100, 
+        y: 150, 
         opacity: 0, 
-        rotation: 360, 
-        scale: 0.5 
+        rotationY: -180, // Giro no eixo Y (estilo flip)
+        rotationZ: -10,  // Inclinação lateral
+        scale: 0.7
     },
     {
         scrollTrigger: {
@@ -246,11 +247,12 @@ gsap.fromTo(".diff-card",
         },
         y: 0,
         opacity: 1,
-        rotation: 0,
+        rotationY: 0,
+        rotationZ: 0,
         scale: 1,
-        duration: 1.5,
-        stagger: 0.3,
-        ease: "back.out(1.2)"
+        duration: 1.8,
+        stagger: 0.4, // Um a um bem pausado
+        ease: "elastic.out(1, 0.75)" // Efeito elástico para finalizar o giro
     }
 );
 

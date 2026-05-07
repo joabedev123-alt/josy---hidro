@@ -1117,6 +1117,7 @@ a {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 4rem 0;
+    perspective: 2000px; /* Perspectiva para o efeito 3D de giro */
 }
 
 .diff-card {
