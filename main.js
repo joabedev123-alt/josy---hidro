@@ -234,15 +234,16 @@ const careSwiper = new Swiper('.careSwiper', {
 gsap.from(".diff-card", {
     scrollTrigger: {
         trigger: ".differentials",
-        start: "top 90%", // Gatilho mais sensível
+        start: "top 85%",
         toggleActions: "play none none none"
     },
-    y: 60,
+    y: 100,
     opacity: 0,
-    rotationY: 180,
+    rotation: 360, // Giro completo
+    scale: 0.5,
     duration: 1.5,
-    stagger: 0.2,
-    ease: "back.out(1.7)"
+    stagger: 0.3, // Um a um bem definido
+    ease: "back.out(1.2)"
 });
 
 // Initialize GLightbox
