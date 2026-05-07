@@ -240,6 +240,19 @@ const careSwiper = new Swiper('.careSwiper', {
         }
     }
 });
+// Differentials Sequential Reveal
+gsap.from(".diff-card", {
+    scrollTrigger: {
+        trigger: ".differentials",
+        start: "top 80%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.3,
+    ease: "power3.out"
+});
+
 // Initialize GLightbox
 const lightbox = GLightbox({
     selector: '.glightbox',

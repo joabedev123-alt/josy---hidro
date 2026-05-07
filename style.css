@@ -399,14 +399,15 @@ a {
 
 .pulse-line-container {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
-    transform: translateY(-50%);
+    height: 100%;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.3;
+    opacity: 0.25;
+    transform: rotate(-15deg) scale(1.2);
+    transform-origin: center;
 }
 
 .pulse-svg {
@@ -427,9 +428,9 @@ a {
 }
 
 .pulse-glow {
-    offset-path: path("M0,50 L200,50 L210,40 L220,60 L230,20 L240,80 L250,45 L260,55 L270,50 L500,50 L510,30 L520,70 L530,10 L540,90 L550,40 L560,60 L570,50 L800,50 L810,40 L820,60 L830,20 L840,80 L850,45 L860,55 L870,50 L1000,50");
+    offset-path: path("M0,1000 L100,900 L150,950 L200,800 L250,900 L300,500 L350,700 L400,200 L450,400 L500,0 L550,300 L600,100 L650,600 L700,400 L750,800 L800,700 L900,1000 L1000,900");
     animation: move-glow 8s linear infinite;
-    filter: blur(2px) brightness(1.5);
+    filter: blur(4px) brightness(2);
 }
 
 @keyframes draw-pulse {
