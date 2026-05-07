@@ -190,7 +190,7 @@ document.querySelectorAll('.color-swatch').forEach(swatch => {
 const swiper = new Swiper('.colorSwiper', {
     loop: true,
     autoplay: {
-        delay: 3000,
+        delay: 2500,
         disableOnInteraction: false,
     },
     pagination: {
@@ -201,10 +201,7 @@ const swiper = new Swiper('.colorSwiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
+    speed: 1000,
 });
 
 // Initialize Care Carousel (Swiper)
