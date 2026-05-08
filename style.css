@@ -110,13 +110,21 @@ a {
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     padding: 2.5rem;
     transition: var(--transition);
     cursor: pointer;
+    color: var(--white);
+}
+
+.card-icon {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .glass-card:hover {
@@ -1248,32 +1256,17 @@ a {
     box-shadow: 0 20px 40px var(--primary-glow);
 }
 
-@media (max-width: 992px) {
-    .tech-grid, .tech-grid.reversed, .fixation-box {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .fixation-image {
-        height: 300px;
-    }
-}
-
-/* Responsive */
+/* Responsive Breakpoints Consolidado */
 @media (max-width: 992px) {
     .headline { font-size: 3.5rem; }
     .product-item { flex-direction: column !important; text-align: center; }
     .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .tech-grid, .tech-grid.reversed, .fixation-box {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
 
-@media (max-width: 768px) {
-    .headline { font-size: 3rem; }
-    .nav-links, .nav-cta { display: none; }
-    .mobile-menu-btn { display: flex; }
-    .nav-content { justify-content: space-between; }
-    .logo { flex: 1; }
-    .cta-group { flex-direction: column; }
-    .cta-buttons { flex-direction: column; }
-}
 
 /* Gallery Grid - Visibilidade Máxima */
 .gallery-grid-container {
@@ -1329,11 +1322,15 @@ a {
     position: relative;
 }
 
+/* Global Video Visibility Fix */
+video {
+    filter: brightness(1.35) contrast(1.1);
+}
+
 .gallery-grid-item video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(1.35) contrast(1.1);
     transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -1482,6 +1479,20 @@ a {
         gap: 1.5rem;
     }
 
+    .glass-card {
+        background: rgba(255, 255, 255, 0.08); /* Mais visível no mobile */
+        padding: 2rem;
+    }
+
+    .diff-card h3 {
+        font-size: 1.5rem;
+        color: var(--white) !important;
+    }
+
+    .diff-card p {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+
     /* Produtos Showcase */
     .product-item {
         flex-direction: column !important;
@@ -1546,29 +1557,7 @@ a {
         height: 350px; /* Altura ideal para mobile */
     }
 
-    /* Footer */
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 3rem;
-    }
-
-    .footer-info, .footer-contact {
-        align-items: center;
-    }
-
-    .whatsapp-float {
-        width: 55px;
-        height: 55px;
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .wa-icon-float {
-        width: 30px;
-        height: 30px;
-    }
-}
+} /* End of 768px mobile master */
 
 /* --- MOBILE EXTRA SMALL (480px) --- */
 @media (max-width: 480px) {
