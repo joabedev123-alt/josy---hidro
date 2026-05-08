@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/logo.png">
@@ -18,15 +18,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- GLightbox CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="app">
         <!-- Navigation -->
         <nav class="navbar glass">
-            <div class="container nav-content">
+            <div class="nav-container nav-content">
                 <div class="logo">
                     <img src="/assets/logo.png" alt="Hydro Cover Logo" class="logo-img">
                 </div>
@@ -34,12 +32,10 @@
                     <a href="#produtos">Produtos</a>
                     <a href="#diferenciais">Diferenciais</a>
                     <a href="#hydro-care">Hydro Care</a>
-                    <a href="#contato" class="btn btn-primary">Consultoria</a>
                 </div>
-                <button class="mobile-menu-btn">
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="nav-cta">
+                    <a href="#contato" class="btn btn-primary">Fale com um especialista</a>
+                </div>
             </div>
         </nav>
 
@@ -62,11 +58,15 @@
                     <div class="slogan-badge slide-up">
                         “Você Relaxa, a Gente Cuida”
                     </div>
-                    <div class="cta-group slide-up">
-                        <a href="https://wa.me/5500000000000" class="btn btn-whatsapp btn-lg">
-                            <svg class="wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+                    
+                    <div class="hero-cta-main slide-up">
+                        <a href="https://wa.me/5511983225770?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Hydro%20Cover.%20Vim%20atrav%C3%A9s%20do%20site." class="btn btn-primary btn-glow-pulse btn-lg">
+                            <i data-lucide="message-circle" class="icon-md"></i>
                             Falar com Especialista
                         </a>
+                    </div>
+
+                    <div class="cta-group slide-up">
                         <a href="#produtos" class="btn btn-outline btn-lg">Explorar Produtos</a>
                     </div>
                     <div class="hero-info slide-up">
@@ -91,22 +91,22 @@
                 </div>
                 <div class="differential-grid">
                     <div class="diff-card glass-card" data-tilt>
-                        <div class="card-icon"><i class="bi bi-gem"></i></div>
+                        <div class="card-icon"><i data-lucide="shield"></i></div>
                         <h3>Estrutura Reforçada</h3>
                         <p>Base sólida para máxima durabilidade em qualquer ambiente.</p>
                     </div>
                     <div class="diff-card glass-card" data-tilt>
-                        <div class="card-icon"><i class="bi bi-thermometer-half"></i></div>
+                        <div class="card-icon"><i data-lucide="thermometer"></i></div>
                         <h3>Máxima Retenção</h3>
                         <p>Isolamento térmico de alta performance que economiza energia.</p>
                     </div>
                     <div class="diff-card glass-card" data-tilt>
-                        <div class="card-icon"><i class="bi bi-award-fill"></i></div>
+                        <div class="card-icon"><i data-lucide="layers"></i></div>
                         <h3>Costura Premium</h3>
                         <p>Acabamento náutico resistente com fios de alta tenacidade.</p>
                     </div>
                     <div class="diff-card glass-card" data-tilt>
-                        <div class="card-icon"><i class="bi bi-shield-check"></i></div>
+                        <div class="card-icon"><i data-lucide="sun"></i></div>
                         <h3>Proteção UV</h3>
                         <p>Tratamento especial contra raios solares e intempéries.</p>
                     </div>
@@ -119,7 +119,7 @@
             <div class="container">
                 <div class="product-item reversed">
                     <div class="product-image-grid">
-                        <div class="grid-item"><img src="/assets/tampao_1.jpg" alt="Detalhe Tampão 1" loading="lazy"></div>
+                        <div class="grid-item"><img src="/assets/tampao_1.jpg" alt="Detalhe Tampão 1"></div>
                         <div class="grid-item"><img src="/assets/tampao_2.jpg" alt="Detalhe Tampão 2"></div>
                         <div class="grid-item"><img src="/assets/tampao_3.jpg" alt="Detalhe Tampão 3"></div>
                         <div class="grid-item"><img src="/assets/tampao_4.jpg" alt="Detalhe Tampão 4"></div>
@@ -134,7 +134,7 @@
                             <li>Aparência Premium</li>
                             <li>Fácil Manuseio</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                        <a href="https://wa.me/5511983225770?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Hydro%20Cover.%20Vim%20atrav%C3%A9s%20do%20site." class="btn btn-primary">Solicitar Orçamento via WhatsApp</a>
                     </div>
                 </div>
 
@@ -148,46 +148,35 @@
                             <li>Alta Durabilidade</li>
                             <li>Praticidade Total</li>
                         </ul>
-                        <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                        <a href="https://wa.me/5511983225770?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Hydro%20Cover.%20Vim%20atrav%C3%A9s%20do%20site." class="btn btn-primary">Solicitar Orçamento via WhatsApp</a>
                     </div>
                     <div class="product-image-grid">
-                        <div class="grid-item"><img src="/assets/enrolavel_1.jpg" alt="Detalhe Enrolável 1" loading="lazy"></div>
-                        <div class="grid-item"><img src="/assets/enrolavel_2.jpg" alt="Detalhe Enrolável 2" loading="lazy"></div>
-                        <div class="grid-item"><img src="/assets/enrolavel_3.jpg" alt="Detalhe Enrolável 3" loading="lazy"></div>
-                        <div class="grid-item"><img src="/assets/enrolavel_4.jpg" alt="Detalhe Enrolável 4" loading="lazy"></div>
+                        <div class="grid-item"><img src="/assets/enrolavel_1.jpg" alt="Detalhe Enrolável 1"></div>
+                        <div class="grid-item"><img src="/assets/enrolavel_2.jpg" alt="Detalhe Enrolável 2"></div>
+                        <div class="grid-item"><img src="/assets/enrolavel_3.jpg" alt="Detalhe Enrolável 3"></div>
+                        <div class="grid-item"><img src="/assets/enrolavel_4.jpg" alt="Detalhe Enrolável 4"></div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Fixation Section -->
-        <section class="section fixation-section">
-            <div class="container">
-                <div class="fixation-box glass-card">
-                    <div class="fixation-content">
-                        <div class="badge-premium">Segurança Absoluta</div>
-                        <h3>Fixação Premium Inviolável</h3>
-                        <p>Nossos sistemas de fixação utilizam mosquetões em níquel e reguladores de alta resistência, compatíveis com decks de madeira ou alvenaria.</p>
-                        <div class="fixation-features">
-                            <div class="fix-item">
-                                <i data-lucide="link"></i>
-                                <span>Fitas de Alta Tenacidade</span>
-                            </div>
-                            <div class="fix-item">
-                                <i data-lucide="lock"></i>
-                                <span>Mosquetões em Níquel</span>
-                            </div>
-                            <div class="fix-item">
-                                <i data-lucide="layers"></i>
-                                <span>Instalação Segura</span>
-                            </div>
-                        </div>
+                <!-- Segurança Absoluta (Novo Padrão) -->
+                <div class="product-item reversed">
+                    <div class="product-image-grid">
+                        <div class="grid-item"><img src="/assets/fixation/presilha_1.jpg" alt="Presilha 1"></div>
+                        <div class="grid-item"><video src="/assets/fixation/presilha_v1.mp4" autoplay muted loop playsinline></video></div>
+                        <div class="grid-item"><img src="/assets/fixation/presilha_2.jpg" alt="Presilha 2"></div>
+                        <div class="grid-item"><img src="/assets/fixation_real.jpg" alt="Detalhe Fixação"></div>
                     </div>
-                    <div class="fixation-grid">
-                        <div class="fix-grid-item"><img src="/assets/fixation/presilha_1.jpg" alt="Presilha 1"></div>
-                        <div class="fix-grid-item"><video src="/assets/fixation/presilha_v1.mp4" autoplay muted loop playsinline></video></div>
-                        <div class="fix-grid-item"><img src="/assets/fixation/presilha_2.jpg" alt="Presilha 2"></div>
-                        <div class="fix-grid-item"><img src="/assets/fixation_real.jpg" alt="Detalhe Fixação"></div>
+                    <div class="image-glow"></div>
+                    <div class="product-info">
+                        <span class="product-badge">Segurança Absoluta</span>
+                        <h2 class="product-title">Fixação Premium Inviolável</h2>
+                        <p class="product-description">Nossos sistemas de fixação utilizam mosquetões em níquel e reguladores de alta resistência, compatíveis com decks de madeira ou alvenaria.</p>
+                        <ul class="product-features">
+                            <li>Fitas de Alta Tenacidade</li>
+                            <li>Mosquetões em Níquel</li>
+                            <li>Instalação Segura</li>
+                        </ul>
+                        <a href="https://wa.me/5511983225770?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Hydro%20Cover.%20Vim%20atrav%C3%A9s%20do%20site." class="btn btn-primary">Solicitar Orçamento via WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -226,12 +215,6 @@
                             <div class="swiper-slide"><img src="/assets/colors/carousel_4.jpg" alt="Aplicação 4"></div>
                             <div class="swiper-slide"><img src="/assets/colors/carousel_5.jpg" alt="Aplicação 5"></div>
                             <div class="swiper-slide"><img src="/assets/colors/carousel_6.jpg" alt="Aplicação 6"></div>
-                            <div class="swiper-slide"><img src="/assets/colors/carousel_7.jpg" alt="Aplicação 7"></div>
-                            <div class="swiper-slide"><img src="/assets/colors/carousel_8.jpg" alt="Aplicação 8"></div>
-                            <div class="swiper-slide"><img src="/assets/colors/carousel_9.jpg" alt="Aplicação 9"></div>
-                            <div class="swiper-slide"><img src="/assets/colors/carousel_10.jpg" alt="Aplicação 10"></div>
-                            <div class="swiper-slide"><img src="/assets/colors/carousel_11.jpg" alt="Aplicação 11"></div>
-                            <div class="swiper-slide"><img src="/assets/colors/carousel_12.jpg" alt="Aplicação 12"></div>
                             <div class="swiper-slide"><img src="/assets/colors/carousel_13.jpg" alt="Aplicação 13"></div>
                             <div class="swiper-slide"><img src="/assets/colors/carousel_14.jpg" alt="Aplicação 14"></div>
                             <div class="swiper-slide"><img src="/assets/colors/carousel_15.jpg" alt="Aplicação 15"></div>
@@ -282,8 +265,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    </div>
+                    </div> <!-- fim tech-grid -->
 
                     <div class="benefits-grid-tech">
                         <div class="benefit-card-mini glass">
@@ -313,25 +295,27 @@
                     </div>
                 </div>
 
-                <!-- Product 2: Capa Enrolável -->
-                <div class="tech-product-block" style="margin-top: 10rem;">
+                <!-- Product 2: Capa Enrolável (Inovação) -->
+                <div class="tech-product-block" style="margin-top: 6rem;">
                     <div class="tech-grid reversed">
                         <div class="tech-visual">
                             <div class="exploded-view-container" data-tilt>
-                                <img src="/assets/enrolavel_tech.jpg" alt="Capa Enrolável Real" class="tech-img">
+                                <img src="/assets/enrolavel_tech.jpg" alt="Capa Enrolável" class="tech-img">
+                                <div class="hotspot" style="top: 30%; left: 40%;" data-tooltip="Alumínio de alta resistência"></div>
+                                <div class="hotspot" style="top: 60%; left: 60%;" data-tooltip="Isolamento térmico superior"></div>
                             </div>
                         </div>
                         <div class="tech-content">
                             <span class="product-badge">Inovação</span>
-                            <h3 class="product-title">Capa Térmica Enrolável</h3>
-                            <p class="product-description">Praticidade sofisticada com máxima proteção térmica. Design moderno para armazenamento compacto.</p>
+                            <h3 class="product-title" style="font-size: 2.5rem;">Capa Enrolável</h3>
+                            <p class="product-description">Praticidade sofisticada com máxima proteção térmica. Design moderno e compacto.</p>
                             
-                            <div class="tech-specs-interactive glass-card">
-                                <h4>Ficha Técnica — Composição</h4>
+                            <div class="tech-specs-interactive">
                                 <ul class="spec-layers">
-                                    <li><span class="layer-name">Estrutura</span><span class="layer-detail">Tubos em alumínio reforçado</span></li>
-                                    <li><span class="layer-name">Isolante</span><span class="layer-detail">Manta de polietileno expandido</span></li>
+                                    <li><span class="layer-name">Estrutura</span><span class="layer-detail">Alumínio reforçado</span></li>
+                                    <li><span class="layer-name">Isolante</span><span class="layer-detail">Polietileno expandido</span></li>
                                     <li><span class="layer-name">Segurança</span><span class="layer-detail">Suporta até 35kg</span></li>
+                                    <li><span class="layer-name">Uso</span><span class="layer-detail">Interno/Externo</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -347,16 +331,8 @@
                             <span>Estrutura Leve</span>
                         </div>
                         <div class="benefit-card-mini glass">
-                            <i data-lucide="droplets"></i>
-                            <span>Fácil Limpeza</span>
-                        </div>
-                        <div class="benefit-card-mini glass">
                             <i data-lucide="shield"></i>
                             <span>Suporta 35kg</span>
-                        </div>
-                        <div class="benefit-card-mini glass">
-                            <i data-lucide="home"></i>
-                            <span>Uso Interno/Externo</span>
                         </div>
                         <div class="benefit-card-mini glass">
                             <i data-lucide="check-circle"></i>
@@ -366,6 +342,8 @@
                 </div>
             </div>
         </section>
+
+
 
         <!-- Hydro Care VIP -->
         <section id="hydro-care" class="section hydro-care">
@@ -377,48 +355,51 @@
                     <p class="section-subtitle">Planos especializados para manter seu Spa impecável o ano inteiro.</p>
                 </div>
 
-                <!-- Maintenance Visuals Carousel -->
-                <div class="maintenance-carousel-container">
-                    <div class="swiper maintenanceSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="/assets/care_fix/m1.jpg" class="glightbox" data-gallery="maintenance-gallery">
-                                    <img src="/assets/care_fix/m1.jpg" alt="Manutenção 01" loading="lazy">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="/assets/care_fix/m2.mp4" class="glightbox" data-gallery="maintenance-gallery">
-                                    <video src="/assets/care_fix/m2.mp4" autoplay muted loop playsinline></video>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="/assets/care_fix/m3.jpg" class="glightbox" data-gallery="maintenance-gallery">
-                                    <img src="/assets/care_fix/m3.jpg" alt="Manutenção 03">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="/assets/care_fix/m4.jpg" class="glightbox" data-gallery="maintenance-gallery">
-                                    <img src="/assets/care_fix/m4.jpg" alt="Manutenção 04">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="/assets/care_fix/m5.jpg" class="glightbox" data-gallery="maintenance-gallery">
-                                    <img src="/assets/care_fix/m5.jpg" alt="Manutenção 05">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="/assets/care_fix/m6.jpg" class="glightbox" data-gallery="maintenance-gallery">
-                                    <img src="/assets/care_fix/m6.jpg" alt="Manutenção 06">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="/assets/care_fix/m7.jpg" class="glightbox" data-gallery="maintenance-gallery">
-                                    <img src="/assets/care_fix/m7.jpg" alt="Manutenção 07">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
+                <!-- Maintenance Visuals Grid (Todos os arquivos da pasta manutenção) -->
+                <div class="maintenance-grid">
+                    <!-- Linha de Cima (01, 02, 03, Geral, Vídeo 01) -->
+                    <a href="/manutenção/manutenção 01.jpeg" class="glightbox maintenance-item" data-gallery="maintenance-gallery">
+                        <img src="/manutenção/manutenção 01.jpeg" alt="Manutenção 01">
+                        <div class="maintenance-overlay"><span>01</span></div>
+                    </a>
+                    <a href="/manutenção/manutenção 02.mp4" class="glightbox maintenance-item" data-gallery="maintenance-gallery">
+                        <video src="/manutenção/manutenção 02.mp4" autoplay muted loop playsinline></video>
+                        <div class="maintenance-overlay"><span>02</span></div>
+                    </a>
+                    <a href="/manutenção/manutenção 03.jpeg" class="glightbox maintenance-item" data-gallery="maintenance-gallery">
+                        <img src="/manutenção/manutenção 03.jpeg" alt="Manutenção 03">
+                        <div class="maintenance-overlay"><span>03</span></div>
+                    </a>
+                    <a href="/manutenção/manutenção.jpeg" class="glightbox maintenance-item" data-gallery="maintenance-gallery">
+                        <img src="/manutenção/manutenção.jpeg" alt="Manutenção Geral">
+                        <div class="maintenance-overlay"><span>Geral</span></div>
+                    </a>
+                    <a href="/manutenção/manutenção.mp4" class="glightbox maintenance-item" data-gallery="maintenance-gallery">
+                        <video src="/manutenção/manutenção.mp4" autoplay muted loop playsinline></video>
+                        <div class="maintenance-overlay"><span>Vídeo 01</span></div>
+                    </a>
+
+                    <!-- Linha de Baixo (04, 05, 06, 07, Vídeo 02) -->
+                    <a href="/manutenção/manutenção 04.jpeg" class="glightbox maintenance-item" data-gallery="maintenance-gallery">
+                        <img src="/manutenção/manutenção 04.jpeg" alt="Manutenção 04">
+                        <div class="maintenance-overlay"><span>04</span></div>
+                    </a>
+                    <a href="/manutenção/manutenção 05.jpeg" class="glightbox maintenance-item" data-gallery="maintenance-gallery">
+                        <img src="/manutenção/manutenção 05.jpeg" alt="Manutenção 05">
+                        <div class="maintenance-overlay"><span>05</span></div>
+                    </a>
+                    <a href="/manutenção/manutenção 06.jpeg" class="glightbox maintenance-item" data-gallery="maintenance-gallery">
+                        <img src="/manutenção/manutenção 06.jpeg" alt="Manutenção 06">
+                        <div class="maintenance-overlay"><span>06</span></div>
+                    </a>
+                    <a href="/manutenção/manutenção 07.jpeg" class="glightbox maintenance-item" data-gallery="maintenance-gallery">
+                        <img src="/manutenção/manutenção 07.jpeg" alt="Manutenção 07">
+                        <div class="maintenance-overlay"><span>07</span></div>
+                    </a>
+                    <a href="/manutenção/manuteção.mp4" class="glightbox maintenance-item" data-gallery="maintenance-gallery">
+                        <video src="/manutenção/manuteção.mp4" autoplay muted loop playsinline></video>
+                        <div class="maintenance-overlay"><span>Vídeo 02</span></div>
+                    </a>
                 </div>
                 
                 <!-- Plans Carousel -->
@@ -438,9 +419,9 @@
                                         <li><i data-lucide="check" class="icon-xs"></i> Ajuste de PH</li>
                                         <li><i data-lucide="check" class="icon-xs"></i> Lavagem técnica do filtro</li>
                                     </ul>
-                                    <a href="https://wa.me/5500000000000" class="btn btn-whatsapp btn-full">
+                                    <a href="https://wa.me/5511983225770?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Hydro%20Cover.%20Vim%20atrav%C3%A9s%20do%20site." class="btn btn-whatsapp btn-full">
                                         <svg class="wa-icon wa-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-                                        Solicitar Avaliação
+                                        Fale com Especialista
                                     </a>
                                 </div>
                             </div>
@@ -459,9 +440,9 @@
                                         <li><i data-lucide="check" class="icon-xs"></i> Polimento com cera náutica</li>
                                         <li><i data-lucide="check" class="icon-xs"></i> Reabastecimento</li>
                                     </ul>
-                                    <a href="https://wa.me/5500000000000" class="btn btn-whatsapp btn-full">
+                                    <a href="https://wa.me/5511983225770?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Hydro%20Cover.%20Vim%20atrav%C3%A9s%20do%20site." class="btn btn-whatsapp btn-full">
                                         <svg class="wa-icon wa-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-                                        Falar com Especialista
+                                        Fale com Especialista
                                     </a>
                                 </div>
                             </div>
@@ -480,9 +461,9 @@
                                         <li><i data-lucide="check" class="icon-xs"></i> Hidratação da capa térmica</li>
                                         <li><i data-lucide="check" class="icon-xs"></i> Proteção UV</li>
                                     </ul>
-                                    <a href="https://wa.me/5500000000000" class="btn btn-whatsapp btn-full">
+                                    <a href="https://wa.me/5511983225770?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Hydro%20Cover.%20Vim%20atrav%C3%A9s%20do%20site." class="btn btn-whatsapp btn-full">
                                         <svg class="wa-icon wa-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-                                        Quero Atendimento Premium
+                                        Fale com Especialista
                                     </a>
                                 </div>
                             </div>
@@ -502,27 +483,25 @@
                     <h2 class="section-title">Experiência Hydro Cover</h2>
                     <p class="section-subtitle">Ambientes transformados pela sofisticação e proteção de nossas capas.</p>
                 </div>
-                <div class="gallery-grid">
-                    <a href="/assets/gallery/gv1.mp4" class="gallery-item glightbox" data-gallery="hydro-gallery" data-parallax>
-                        <video src="/assets/gallery/gv1.mp4" autoplay muted loop playsinline></video>
-                        <div class="gallery-overlay"><span>Luxo e Proteção</span></div>
-                    </a>
-                    <a href="/assets/gallery/gv2.mp4" class="gallery-item glightbox" data-gallery="hydro-gallery" data-parallax>
-                        <video src="/assets/gallery/gv2.mp4" autoplay muted loop playsinline></video>
-                        <div class="gallery-overlay"><span>Design Exclusivo</span></div>
-                    </a>
-                    <a href="/assets/gallery/gv3.mp4" class="gallery-item glightbox" data-gallery="hydro-gallery" data-parallax>
-                        <video src="/assets/gallery/gv3.mp4" autoplay muted loop playsinline></video>
-                        <div class="gallery-overlay"><span>Praticidade Hydro</span></div>
-                    </a>
-                    <a href="/assets/gallery/gv4.mp4" class="gallery-item glightbox" data-gallery="hydro-gallery" data-parallax>
-                        <video src="/assets/gallery/gv4.mp4" autoplay muted loop playsinline></video>
-                        <div class="gallery-overlay"><span>Segurança Total</span></div>
-                    </a>
-                    <a href="/assets/gallery/gv5.mp4" class="gallery-item glightbox" data-gallery="hydro-gallery" data-parallax>
-                        <video src="/assets/gallery/gv5.mp4" autoplay muted loop playsinline></video>
-                        <div class="gallery-overlay"><span>Acabamento Premium</span></div>
-                    </a>
+                <!-- Gallery Carousel (Vídeos Aparentes) -->
+                <div class="gallery-grid-container">
+                    <div class="gallery-grid">
+                        <div class="gallery-grid-item">
+                            <video src="/pacas_videos/capas_v1.mp4?v=4" autoplay muted loop playsinline preload="auto" style="width:100%; height:100%; object-fit: cover;"></video>
+                        </div>
+                        <div class="gallery-grid-item">
+                            <video src="/pacas_videos/capas_v2.mp4?v=4" autoplay muted loop playsinline preload="auto" style="width:100%; height:100%; object-fit: cover;"></video>
+                        </div>
+                        <div class="gallery-grid-item">
+                            <video src="/pacas_videos/capas_v3.mp4?v=4" autoplay muted loop playsinline preload="auto" style="width:100%; height:100%; object-fit: cover;"></video>
+                        </div>
+                        <div class="gallery-grid-item">
+                            <video src="/pacas_videos/capas_v4.mp4?v=4" autoplay muted loop playsinline preload="auto" style="width:100%; height:100%; object-fit: cover;"></video>
+                        </div>
+                        <div class="gallery-grid-item">
+                            <video src="/pacas_videos/capas_v5.mp4?v=4" autoplay muted loop playsinline preload="auto" style="width:100%; height:100%; object-fit: cover;"></video>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -557,13 +536,9 @@
                 <h2 class="cta-title">Seu Spa Merece o Melhor Cuidado</h2>
                 <p class="cta-text">Fale agora com um especialista Hydro Cover e descubra a solução ideal para proteger, valorizar e renovar seu Spa.</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/5500000000000" class="btn btn-whatsapp btn-lg">
+                    <a href="https://wa.me/5511983225770?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Hydro%20Cover.%20Vim%20atrav%C3%A9s%20do%20site." class="btn btn-whatsapp btn-lg">
                         <svg class="wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
                         Solicitar Consultoria Premium
-                    </a>
-                    <a href="https://wa.me/5500000000000" class="btn btn-whatsapp btn-lg">
-                        <svg class="wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-                        Chamar no WhatsApp
                     </a>
                 </div>
             </div>
@@ -578,26 +553,14 @@
                             <img src="/assets/logo.png" alt="Hydro Cover Logo" class="logo-img footer-logo">
                         </div>
                         <p class="footer-slogan">Você Relaxa, a Gente Cuida</p>
-                        <a href="https://camaly.com.br/" target="_blank" class="camaly-credit">Produzida com 💚 por CAMALY</a>
+                        <p class="footer-credit">Produzida com 💙 por <a href="https://camaly.com.br/" target="_blank">CAMALY</a></p>
                     </div>
                     <div class="footer-contact">
                         <h4>Contato</h4>
                         <p>Hydrocovercare@gmail.com</p>
                         <p>Comercial@hydrocovercare.com</p>
-                        <a href="https://www.instagram.com/_hydrocover?igsh=MW1oaXd3MDBqYnRhYQ%3D%3D&utm_source=qr" target="_blank" class="instagram-link">
-                            <svg class="instagram-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <defs>
-                                    <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-                                        <stop offset="0%" style="stop-color:#f09433"/>
-                                        <stop offset="25%" style="stop-color:#e6683c"/>
-                                        <stop offset="50%" style="stop-color:#dc2743"/>
-                                        <stop offset="75%" style="stop-color:#cc2366"/>
-                                        <stop offset="100%" style="stop-color:#bc1888"/>
-                                    </linearGradient>
-                                </defs>
-                                <path fill="url(#ig-grad)" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                            </svg>
-                            <span>@_hydrocover</span>
+                        <a href="https://www.instagram.com/_hydrocover?igsh=MW1oaXd3MDBqYnRhYQ%3D%3D&utm_source=qr" target="_blank" class="footer-social-link">
+                            <i data-lucide="instagram"></i> @_hydrocover
                         </a>
                     </div>
                     <div class="footer-legal">
@@ -614,19 +577,19 @@
     </div>
 
     <!-- Scripts -->
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511983225770?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Hydro%20Cover.%20Vim%20atrav%C3%A9s%20do%20site." class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <svg class="wa-icon-float" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
     <!-- GLightbox JS -->
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5500000000000" target="_blank" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.1-3.2-5.5-.3-8.5 2.4-11.2 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-        </svg>
-        <span class="whatsapp-tooltip">Fale Conosco</span>
-    </a>
-
+    <script type="module" src="/main.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-import { createIcons, Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones, Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Diamond, ThermometerSun, ShieldSun } from 'lucide';
+import { createIcons, Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones, Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock } from 'lucide';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,6 +13,13 @@ const lenis = new Lenis({
     smoothWheel: true,
 });
 
+// Initialize Lucide Icons
+createIcons({
+    icons: {
+        Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones,
+        Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock
+    }
+});
 
 function raf(time) {
     lenis.raf(time);
@@ -161,18 +168,21 @@ gsap.from('.trust-item', {
     ease: 'power2.out'
 });
 
-// Navbar visibility logic
+// Navbar visibility logic with GSAP ScrollTrigger for maximum reliability
 const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        // Scrolling down or away from top
-        navbar.style.transform = 'translateY(-100%)';
-        navbar.style.background = 'rgba(2, 6, 23, 0.9)';
-    } else {
-        // At the top
-        navbar.style.transform = 'translateY(0)';
-        navbar.style.background = 'rgba(255, 255, 255, 0.05)';
+ScrollTrigger.create({
+    start: 'top top',
+    onUpdate: (self) => {
+        if (self.scroll() > 10) {
+            // Se saiu do topo - esconde
+            navbar.classList.add('navbar-hidden');
+            navbar.style.background = 'rgba(2, 6, 23, 0.95)';
+        } else {
+            // No topo absoluto - mostra
+            navbar.classList.remove('navbar-hidden');
+            navbar.style.background = 'rgba(2, 6, 23, 0.7)';
+        }
     }
 });
 
@@ -190,7 +200,7 @@ document.querySelectorAll('.color-swatch').forEach(swatch => {
 const swiper = new Swiper('.colorSwiper', {
     loop: true,
     autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
     },
     pagination: {
@@ -201,7 +211,16 @@ const swiper = new Swiper('.colorSwiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    speed: 1000,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 4,
+        }
+    }
 });
 
 // Initialize Care Carousel (Swiper)
@@ -230,21 +249,6 @@ const careSwiper = new Swiper('.careSwiper', {
         }
     }
 });
-// Differentials Animation
-gsap.from(".diff-card", {
-    scrollTrigger: {
-        trigger: ".differentials",
-        start: "top 90%", // Gatilho mais sensível
-        toggleActions: "play none none none"
-    },
-    y: 60,
-    opacity: 0,
-    rotationY: 180,
-    duration: 1.5,
-    stagger: 0.2,
-    ease: "back.out(1.7)"
-});
-
 // Initialize GLightbox
 const lightbox = GLightbox({
     selector: '.glightbox',
@@ -253,35 +257,6 @@ const lightbox = GLightbox({
     autoplayVideos: true
 });
 
-// Initialize Lucide Icons (at the end for better reliability)
-createIcons({
-    icons: {
-        Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones,
-        Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Diamond, ThermometerSun, ShieldSun
-    }
-});
 
-// Initialize Maintenance Visual Carousel (Swiper)
-const maintenanceSwiper = new Swiper('.maintenanceSwiper', {
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    slidesPerView: 1,
-    spaceBetween: 10,
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        },
-        1024: {
-            slidesPerView: 4,
-            spaceBetween: 20
-        }
-    }
-});
+
+
