@@ -1,4 +1,4 @@
-import { createIcons, Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones, Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock } from 'lucide';
+import { createIcons, Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones, Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Menu, X } from 'lucide';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -17,7 +17,7 @@ const lenis = new Lenis({
 createIcons({
     icons: {
         Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones,
-        Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock
+        Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Menu, X
     }
 });
 
@@ -85,46 +85,52 @@ gsap.utils.toArray('.glass-card').forEach((card, i) => {
 });
 
 gsap.utils.toArray('.product-item').forEach((item) => {
-    const img = item.querySelector('.product-image');
+    const img = item.querySelector('.product-image-grid');
     const info = item.querySelector('.product-info');
 
-    gsap.from(img, {
-        scrollTrigger: {
-            trigger: item,
-            start: 'top 80%',
-        },
-        x: item.classList.contains('reversed') ? 100 : -100,
-        opacity: 0,
-        duration: 1.2,
-        ease: 'power4.out'
-    });
+    if (img) {
+        gsap.from(img, {
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 80%',
+            },
+            x: item.classList.contains('reversed') ? 100 : -100,
+            opacity: 0,
+            duration: 1.2,
+            ease: 'power4.out'
+        });
+    }
 
-    gsap.from(info, {
-        scrollTrigger: {
-            trigger: item,
-            start: 'top 80%',
-        },
-        x: item.classList.contains('reversed') ? -100 : 100,
-        opacity: 0,
-        duration: 1.2,
-        ease: 'power4.out',
-        delay: 0.2
-    });
+    if (info) {
+        gsap.from(info, {
+            scrollTrigger: {
+                trigger: item,
+                start: 'top 80%',
+            },
+            x: item.classList.contains('reversed') ? -100 : 100,
+            opacity: 0,
+            duration: 1.2,
+            ease: 'power4.out',
+            delay: 0.2
+        });
+    }
 });
 
 // Parallax for images
 gsap.utils.toArray('[data-parallax]').forEach((container) => {
     const img = container.querySelector('img');
-    gsap.to(img, {
-        scrollTrigger: {
-            trigger: container,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true
-        },
-        y: 100,
-        ease: 'none'
-    });
+    if (img) {
+        gsap.to(img, {
+            scrollTrigger: {
+                trigger: container,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true
+            },
+            y: 100,
+            ease: 'none'
+        });
+    }
 });
 
 // Heartbeat Effect for Differentials
@@ -143,7 +149,7 @@ ScrollTrigger.create({
 });
 
 // Gallery Animations
-gsap.from('.gallery-item', {
+gsap.from('.gallery-grid-item', {
     scrollTrigger: {
         trigger: '.gallery-section',
         start: 'top 80%',
@@ -255,8 +261,30 @@ const lightbox = GLightbox({
     touchNavigation: true,
     loop: true,
     autoplayVideos: true
+});// Mobile Menu Logic
+const menuBtn = document.querySelector('.mobile-menu-btn');
+const closeBtn = document.querySelector('.close-menu');
+const menuOverlay = document.querySelector('.mobile-menu-overlay');
+const menuLinks = document.querySelectorAll('.mobile-nav-links a');
+
+if (menuBtn && menuOverlay) {
+    menuBtn.addEventListener('click', () => {
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+const closeMenu = () => {
+    if (menuOverlay) {
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+};
+
+if (closeBtn) {
+    closeBtn.addEventListener('click', closeMenu);
+}
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
 });
-
-
-
-
