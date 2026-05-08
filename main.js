@@ -62,7 +62,7 @@ heroTl.from('.navbar', {
 }, '-=0.7');
 
 // Scroll Animations
-gsap.utils.toArray('.glass-card:not(.diff-card)').forEach((card, i) => {
+gsap.utils.toArray('.glass-card').forEach((card, i) => {
     gsap.from(card, {
         scrollTrigger: {
             trigger: card,
@@ -231,30 +231,19 @@ const careSwiper = new Swiper('.careSwiper', {
     }
 });
 // Differentials Animation
-gsap.fromTo(".diff-card", 
-    { 
-        y: 150, 
-        opacity: 0, 
-        rotationY: -180, // Giro no eixo Y (estilo flip)
-        rotationZ: -10,  // Inclinação lateral
-        scale: 0.7
+gsap.from(".diff-card", {
+    scrollTrigger: {
+        trigger: ".differentials",
+        start: "top 90%", // Gatilho mais sensível
+        toggleActions: "play none none none"
     },
-    {
-        scrollTrigger: {
-            trigger: ".differentials",
-            start: "top 80%",
-            toggleActions: "play none none none"
-        },
-        y: 0,
-        opacity: 1,
-        rotationY: 0,
-        rotationZ: 0,
-        scale: 1,
-        duration: 1.8,
-        stagger: 0.4, // Um a um bem pausado
-        ease: "elastic.out(1, 0.75)" // Efeito elástico para finalizar o giro
-    }
-);
+    y: 60,
+    opacity: 0,
+    rotationY: 180,
+    duration: 1.5,
+    stagger: 0.2,
+    ease: "back.out(1.7)"
+});
 
 // Initialize GLightbox
 const lightbox = GLightbox({
