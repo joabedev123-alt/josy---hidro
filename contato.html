@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Hydro Cover Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation (Shared) -->
+        <nav class="navbar glass">
+            <div class="nav-container nav-content">
+                <div class="logo">
+                    <a href="index.html"><img src="/assets/logo.png" alt="Logo" class="logo-img"></a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">HOME</a>
+                    <a href="sobre.html">SOBRE A HYDRO COVER</a>
+                    <a href="produtos.html">LINHA PREMIUM</a>
+                    <a href="servicos.html">HYDRO CARE</a>
+                    <a href="galeria.html">GALERIA</a>
+                    <a href="blog.html">BLOG</a>
+                    <a href="contato.html">CONTATO</a>
+                </div>
+                <button class="mobile-menu-btn"><i data-lucide="menu"></i></button>
+            </div>
+        </nav>
+
+        <!-- Page Header -->
+        <header class="page-header">
+            <div class="container">
+                <div class="badge-premium">Canais de Atendimento</div>
+                <h1 class="page-title">Fale Conosco</h1>
+                <p class="subheadline">Estamos prontos para oferecer a melhor consultoria técnica para seu spa.</p>
+            </div>
+        </header>
+
+        <!-- Contact Section -->
+        <section class="section contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h2>Vamos Criar algo Incrível</h2>
+                        <p style="font-size: 1.2rem; opacity: 0.7; margin-bottom: 3rem;">Atendemos em todo o território nacional com logística própria e parceiros certificados.</p>
+                        
+                        <div class="info-list" style="display: grid; gap: 2rem;">
+                            <div class="info-item">
+                                <i data-lucide="message-circle" class="icon-md" style="color: var(--primary);"></i>
+                                <div>
+                                    <h4 style="margin-bottom: 0.2rem;">WhatsApp</h4>
+                                    <a href="https://wa.me/5511983225770" style="font-size: 1.3rem; font-weight: 700;">(11) 98322-5770</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="mail" class="icon-md" style="color: var(--primary);"></i>
+                                <div>
+                                    <h4 style="margin-bottom: 0.2rem;">E-mail</h4>
+                                    <p>comercial@hydrocovercare.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i data-lucide="instagram" class="icon-md" style="color: var(--primary);"></i>
+                                <div>
+                                    <h4 style="margin-bottom: 0.2rem;">Instagram</h4>
+                                    <a href="https://instagram.com/_hydrocover" target="_blank">@_hydrocover</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-premium">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" class="form-control" placeholder="Seu nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail Corporativo</label>
+                                <input type="email" id="email" class="form-control" placeholder="seu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Como podemos ajudar?</label>
+                                <textarea id="message" class="form-control" rows="5" placeholder="Descreva seu projeto ou dúvida"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full btn-lg">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (Shared) -->
+        <footer class="footer">
+            <div class="container text-center">
+                <img src="/assets/logo.png" alt="Logo" class="footer-logo">
+                <p>&copy; 2026 Hydro Cover. Atendimento Nacional.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>

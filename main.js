@@ -1,4 +1,4 @@
-import { createIcons, Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones, Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Menu, X } from 'lucide';
+import { createIcons, Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones, Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Menu, X, ChevronRight, Play } from 'lucide';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -17,7 +17,7 @@ const lenis = new Lenis({
 createIcons({
     icons: {
         Sparkles, MapPin, Shield, Thermometer, Layers, Sun, Droplet, Check, Crown, Award, ShieldCheck, Truck, Headphones,
-        Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Menu, X
+        Zap, FlameKindling, Calendar, Layout, Feather, CheckCircle, Link, Lock, Menu, X, ChevronRight, Play
     }
 });
 
@@ -27,48 +27,74 @@ function raf(time) {
 }
 requestAnimationFrame(raf);
 
-// Hero Animations
-const heroTl = gsap.timeline();
+// Highlight Active Link
+const currentPath = window.location.pathname;
+const navLinks = document.querySelectorAll('.nav-links a');
+navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === '/' && href === 'index.html') || (currentPath.endsWith(href) && href !== 'index.html')) {
+        link.classList.add('active');
+    }
+});
 
-heroTl.from('.navbar', {
-    y: -100,
-    opacity: 0,
-    duration: 1,
-    ease: 'power4.out'
-})
-.from('.badge-premium', {
-    y: 30,
-    opacity: 0,
-    duration: 0.8,
-    ease: 'power3.out'
-}, '-=0.5')
-.from('.headline', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    ease: 'power4.out'
-}, '-=0.6')
-.from('.subheadline', {
-    y: 30,
-    opacity: 0,
-    duration: 0.8,
-    ease: 'power3.out'
-}, '-=0.7')
-.from('.slogan-badge', {
-    y: 20,
-    opacity: 0,
-    duration: 0.8,
-    ease: 'power3.out'
-}, '-=0.7')
-.from('.cta-group .btn', {
-    y: 20,
-    opacity: 0,
-    stagger: 0.2,
-    duration: 0.8,
-    ease: 'power3.out'
-}, '-=0.7');
+// Hero Animations (Only if on Home or pages with hero)
+if (document.querySelector('.hero')) {
+    const heroTl = gsap.timeline();
+    heroTl.from('.navbar', {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        ease: 'power4.out'
+    })
+    .from('.badge-premium', {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+    }, '-=0.5')
+    .from('.headline', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power4.out'
+    }, '-=0.6')
+    .from('.subheadline', {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+    }, '-=0.7')
+    .from('.slogan-badge', {
+        y: 20,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+    }, '-=0.7')
+    .from('.cta-group .btn', {
+        y: 20,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: 'power3.out'
+    }, '-=0.7');
+}
 
-// Scroll Animations
+// Subpage Header Animations
+if (document.querySelector('.page-header')) {
+    gsap.from('.page-title', {
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        ease: 'power4.out'
+    });
+    gsap.from('.page-header-bg', {
+        scale: 1.2,
+        duration: 2,
+        ease: 'power2.out'
+    });
+}
+
+// Scroll Animations (Global)
 gsap.utils.toArray('.glass-card').forEach((card, i) => {
     gsap.from(card, {
         scrollTrigger: {
@@ -82,38 +108,6 @@ gsap.utils.toArray('.glass-card').forEach((card, i) => {
         ease: 'power3.out',
         delay: i * 0.1
     });
-});
-
-gsap.utils.toArray('.product-item').forEach((item) => {
-    const img = item.querySelector('.product-image-grid');
-    const info = item.querySelector('.product-info');
-
-    if (img) {
-        gsap.from(img, {
-            scrollTrigger: {
-                trigger: item,
-                start: 'top 80%',
-            },
-            x: item.classList.contains('reversed') ? 100 : -100,
-            opacity: 0,
-            duration: 1.2,
-            ease: 'power4.out'
-        });
-    }
-
-    if (info) {
-        gsap.from(info, {
-            scrollTrigger: {
-                trigger: item,
-                start: 'top 80%',
-            },
-            x: item.classList.contains('reversed') ? -100 : 100,
-            opacity: 0,
-            duration: 1.2,
-            ease: 'power4.out',
-            delay: 0.2
-        });
-    }
 });
 
 // Parallax for images
@@ -133,139 +127,67 @@ gsap.utils.toArray('[data-parallax]').forEach((container) => {
     }
 });
 
-// Heartbeat Effect for Differentials
-ScrollTrigger.create({
-    trigger: '.differential-grid',
-    start: 'top 80%',
-    onEnter: () => {
-        const cards = document.querySelectorAll('.diff-card');
-        cards.forEach((card, index) => {
-            setTimeout(() => {
-                card.classList.add('pulse');
-                setTimeout(() => card.classList.remove('pulse'), 2000);
-            }, index * 400);
-        });
-    }
-});
-
-// Gallery Animations
-gsap.from('.gallery-grid-item', {
-    scrollTrigger: {
-        trigger: '.gallery-section',
-        start: 'top 80%',
-    },
-    y: 50,
-    opacity: 0,
-    stagger: 0.2,
-    duration: 1,
-    ease: 'power3.out'
-});
-
-// Trust Bar Animations
-gsap.from('.trust-item', {
-    scrollTrigger: {
-        trigger: '.trust-bar',
-        start: 'top 90%',
-    },
-    y: 20,
-    opacity: 0,
-    stagger: 0.1,
-    duration: 0.8,
-    ease: 'power2.out'
-});
-
-// Navbar visibility logic with GSAP ScrollTrigger for maximum reliability
+// Navbar visibility logic
 const navbar = document.querySelector('.navbar');
-
-ScrollTrigger.create({
-    start: 'top top',
-    onUpdate: (self) => {
-        if (self.scroll() > 10) {
-            // Se saiu do topo - esconde
-            navbar.classList.add('navbar-hidden');
-            navbar.style.background = 'rgba(2, 6, 23, 0.95)';
-        } else {
-            // No topo absoluto - mostra
-            navbar.classList.remove('navbar-hidden');
-            navbar.style.background = 'rgba(2, 6, 23, 0.7)';
+if (navbar) {
+    ScrollTrigger.create({
+        start: 'top top',
+        onUpdate: (self) => {
+            if (self.scroll() > 10) {
+                navbar.classList.add('navbar-hidden');
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                navbar.classList.remove('navbar-hidden');
+                navbar.style.background = 'rgba(255, 255, 255, 0.9)';
+            }
         }
-    }
-});
-
-// Hover effect for color swatches
-document.querySelectorAll('.color-swatch').forEach(swatch => {
-    swatch.addEventListener('mouseenter', () => {
-        gsap.to(swatch, { scale: 1.2, duration: 0.3, ease: 'power2.out' });
     });
-    swatch.addEventListener('mouseleave', () => {
-        gsap.to(swatch, { scale: 1, duration: 0.3, ease: 'power2.out' });
+}
+
+// Initialize Swipers
+if (document.querySelector('.colorSwiper')) {
+    new Swiper('.colorSwiper', {
+        loop: true,
+        autoplay: { delay: 3000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 }
+        }
     });
-});
+}
 
-// Initialize Color Carousel (Swiper)
-const swiper = new Swiper('.colorSwiper', {
-    loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 1,
-    spaceBetween: 20,
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-        },
-        1024: {
-            slidesPerView: 4,
+if (document.querySelector('.careSwiper')) {
+    new Swiper('.careSwiper', {
+        loop: true,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 20 },
+            768: { slidesPerView: 2, spaceBetween: 30 },
+            1024: { slidesPerView: 3, spaceBetween: 40 }
         }
-    }
-});
+    });
+}
 
-// Initialize Care Carousel (Swiper)
-const careSwiper = new Swiper('.careSwiper', {
-    loop: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 20
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 30
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 40
-        }
-    }
-});
 // Initialize GLightbox
-const lightbox = GLightbox({
-    selector: '.glightbox',
-    touchNavigation: true,
-    loop: true,
-    autoplayVideos: true
-});// Mobile Menu Logic
+if (document.querySelector('.glightbox')) {
+    GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+    });
+}
+
+// Mobile Menu Logic
 const menuBtn = document.querySelector('.mobile-menu-btn');
 const closeBtn = document.querySelector('.close-menu');
 const menuOverlay = document.querySelector('.mobile-menu-overlay');
-const menuLinks = document.querySelectorAll('.mobile-nav-links a');
+const menuLinksMobile = document.querySelectorAll('.mobile-nav-links a');
 
 if (menuBtn && menuOverlay) {
     menuBtn.addEventListener('click', () => {
@@ -285,6 +207,6 @@ if (closeBtn) {
     closeBtn.addEventListener('click', closeMenu);
 }
 
-menuLinks.forEach(link => {
+menuLinksMobile.forEach(link => {
     link.addEventListener('click', closeMenu);
 });
