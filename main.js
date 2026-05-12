@@ -102,8 +102,8 @@ gsap.utils.toArray('.glass-card').forEach((card, i) => {
             start: 'top 85%',
             toggleActions: 'play none none reverse'
         },
-        y: 60,
-        opacity: 0,
+        y: 40,
+        opacity: 0.2,
         duration: 0.8,
         ease: 'power3.out',
         delay: i * 0.1
