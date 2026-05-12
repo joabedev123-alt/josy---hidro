@@ -1893,8 +1893,8 @@ video {
         grid-template-columns: 1fr;
     }
 
-    .grid-item {
-        height: 150px;
+    .product-image-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
 /* Page Header (for subpages) */
