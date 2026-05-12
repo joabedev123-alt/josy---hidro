@@ -12,6 +12,8 @@ export default defineConfig({
         galeria: resolve(__dirname, 'galeria.html'),
         blog: resolve(__dirname, 'blog.html'),
         contato: resolve(__dirname, 'contato.html'),
+        enrolavel: resolve(__dirname, 'enrolavel.html'),
+        acessorios: resolve(__dirname, 'acessorios.html'),
       },
     },
   },
