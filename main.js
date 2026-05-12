@@ -95,7 +95,7 @@ if (document.querySelector('.page-header')) {
 }
 
 // Scroll Animations (Global)
-gsap.utils.toArray('.glass-card').forEach((card, i) => {
+gsap.utils.toArray('.glass-card, .pricing-card').forEach((card, i) => {
     gsap.from(card, {
         scrollTrigger: {
             trigger: card,
