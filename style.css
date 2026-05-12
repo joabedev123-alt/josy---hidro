@@ -110,10 +110,10 @@ a {
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 24px;
     padding: 2.5rem;
     transition: var(--transition);
@@ -977,10 +977,29 @@ a {
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding: 3rem;
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.care-card .btn-whatsapp {
-    margin-top: auto;
+.care-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px var(--primary-glow);
+}
+
+.care-card.featured {
+    border: 2px solid var(--primary);
+    background: rgba(0, 85, 255, 0.08);
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--primary-glow);
+}
+
+.care-card.featured:hover {
+    transform: scale(1.08) translateY(-5px);
 }
 
 .care-header {
@@ -2373,11 +2392,47 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 @media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.6rem !important;
+    .section-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 2rem !important;
     }
     
-    .mobile-nav-links a {
-        font-size: 1.3rem !important;
+    .btn {
+        width: 100% !important; /* Botões full width em telas muito pequenas */
+        margin-bottom: 0.5rem;
+        padding: 1rem !important;
     }
+
+    .care-card {
+        padding: 2rem !important;
+    }
+
+    .history-text h2 {
+        font-size: 2rem !important;
+    }
+
+    /* Footer adjustments */
+    .footer-contact, .footer-legal {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+/* Prevenção de Layout Shift e Melhoria de Scroll */
+.section {
+    overflow: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Otimização de Menu Mobile */
+.mobile-nav-links a {
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-links a:active {
+    transform: scale(0.95);
 }
