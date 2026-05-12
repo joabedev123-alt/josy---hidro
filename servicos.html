@@ -14,22 +14,43 @@
     <div id="app">
         <!-- Navigation (Shared) -->
         <nav class="navbar glass">
-            <div class="nav-container nav-content">
+            <div class="nav-content" style="padding: 0 2rem;">
                 <div class="logo">
-                    <a href="index.html"><img src="/assets/logo.png" alt="Logo" class="logo-img"></a>
+                    <a href="index.html"><img src="/logo/0101.png" alt="Logo" class="logo-img"></a>
                 </div>
                 <div class="nav-links">
                     <a href="index.html">HOME</a>
-                    <a href="sobre.html">SOBRE A HYDRO COVER</a>
-                    <a href="produtos.html">LINHA PREMIUM</a>
-                    <a href="servicos.html">HYDRO CARE</a>
-                    <a href="galeria.html">GALERIA</a>
-                    <a href="blog.html">BLOG</a>
+                    <a href="produtos.html">TAMPÃO TÉRMICO</a>
+                    <a href="enrolavel.html">CAPA ENROLÁVEL</a>
+                    <a href="servicos.html" class="active">HYDRO CARE</a>
+                    <a href="acessorios.html">ACESSÓRIOS</a>
                     <a href="contato.html">CONTATO</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="https://wa.me/5511983225770" class="btn btn-primary">Fale com um especialista</a>
                 </div>
                 <button class="mobile-menu-btn"><i data-lucide="menu"></i></button>
             </div>
         </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+            <div class="mobile-menu-content">
+                <button class="close-menu" aria-label="Fechar Menu">
+                    <i data-lucide="x"></i>
+                </button>
+                <div class="mobile-nav-links">
+                    <a href="index.html">HOME</a>
+                    <a href="produtos.html">TAMPÃO TÉRMICO</a>
+                    <a href="enrolavel.html">CAPA ENROLÁVEL</a>
+                    <a href="servicos.html">HYDRO CARE</a>
+                    <a href="acessorios.html">ACESSÓRIOS</a>
+
+                    <a href="contato.html">CONTATO</a>
+                    <a href="https://wa.me/5511983225770" class="btn btn-primary">Falar com Especialista</a>
+                </div>
+            </div>
+        </div>
 
         <!-- Page Header -->
         <header class="page-header service-hero">
@@ -40,56 +61,61 @@
             </div>
         </header>
 
-        <!-- Plans Detailed -->
-        <section class="section plans-detailed-section">
+        <!-- Plans Section -->
+        <section id="planos" class="section care-plans-section">
             <div class="container">
-                <div class="service-plans-detailed">
+                <div class="text-center" style="margin-bottom: 5rem;">
+                    <div class="badge-premium">Nossos Planos</div>
+                    <h2 class="section-title" style="max-width: 800px; margin: 0 auto 1rem;">A elite do cuidado concierge para seu ambiente de relaxamento.</h2>
+                </div>
+                
+                <div class="care-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
                     <!-- Check-up Cristal -->
-                    <div class="care-card glass-card">
-                        <div class="care-header">
-                            <h3>Check-up Cristal</h3>
-                            <div class="care-icon"><i data-lucide="droplet"></i></div>
+                    <div class="care-card glass-card" style="padding: 3rem; border-radius: 30px; display: flex; flex-direction: column; transition: var(--transition); border: 1px solid var(--glass-border);">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+                            <h3 style="font-size: 1.8rem; font-weight: 700;">Check-up Cristal</h3>
+                            <i data-lucide="droplet" style="color: var(--primary); width: 32px; height: 32px;"></i>
                         </div>
-                        <p class="care-desc">Foco total na pureza e equilíbrio da água.</p>
-                        <ul class="care-list">
-                            <li><i data-lucide="check"></i> Aspiração de fundo</li>
-                            <li><i data-lucide="check"></i> Ajuste técnico de PH</li>
-                            <li><i data-lucide="check"></i> Limpeza química do filtro</li>
-                            <li><i data-lucide="check"></i> Análise de alcalinidade</li>
+                        <p style="opacity: 0.8; margin-bottom: 2rem; font-size: 1.1rem;">Foco total na pureza e equilíbrio da água.</p>
+                        <ul style="list-style: none; margin-bottom: 3rem; flex-grow: 1;">
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Aspiração de fundo</li>
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Ajuste técnico de PH</li>
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Limpeza química do filtro</li>
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Análise de alcalinidade</li>
                         </ul>
-                        <a href="https://wa.me/5511983225770" class="btn btn-whatsapp btn-full">Solicitar Consultoria</a>
+                        <a href="https://wa.me/5511983225770" class="btn btn-primary btn-full">Solicitar Consultoria</a>
                     </div>
 
                     <!-- Revitaliza Spa -->
-                    <div class="care-card glass-card featured">
-                        <div class="care-header">
-                            <h3>Revitaliza Spa</h3>
-                            <div class="care-icon"><i data-lucide="sparkles"></i></div>
+                    <div class="care-card glass-card featured" style="padding: 3rem; border-radius: 30px; display: flex; flex-direction: column; transition: var(--transition); border: 2px solid var(--primary); transform: scale(1.05); background: rgba(0, 85, 255, 0.05); box-shadow: 0 0 30px var(--primary-glow);">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+                            <h3 style="font-size: 1.8rem; font-weight: 700;">Revitaliza Spa</h3>
+                            <i data-lucide="sparkles" style="color: var(--primary); width: 32px; height: 32px;"></i>
                         </div>
-                        <p class="care-desc">Renovação estética completa para seu spa.</p>
-                        <ul class="care-list">
-                            <li><i data-lucide="check"></i> Esvaziamento e secagem</li>
-                            <li><i data-lucide="check"></i> Higienização profunda</li>
-                            <li><i data-lucide="check"></i> Polimento com cera náutica</li>
-                            <li><i data-lucide="check"></i> Reabastecimento controlado</li>
+                        <p style="opacity: 0.8; margin-bottom: 2rem; font-size: 1.1rem;">Renovação estética completa para seu spa.</p>
+                        <ul style="list-style: none; margin-bottom: 3rem; flex-grow: 1;">
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Esvaziamento e secagem</li>
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Higienização profunda</li>
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Polimento com cera náutica</li>
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Reabastecimento controlado</li>
                         </ul>
-                        <a href="https://wa.me/5511983225770" class="btn btn-whatsapp btn-full">Solicitar Consultoria</a>
+                        <a href="https://wa.me/5511983225770" class="btn btn-primary btn-full">Solicitar Consultoria</a>
                     </div>
 
                     <!-- Experiência Master -->
-                    <div class="care-card glass-card">
-                        <div class="care-header">
-                            <h3>Experiência Master</h3>
-                            <div class="care-icon"><i data-lucide="crown"></i></div>
+                    <div class="care-card glass-card" style="padding: 3rem; border-radius: 30px; display: flex; flex-direction: column; transition: var(--transition); border: 1px solid var(--glass-border);">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+                            <h3 style="font-size: 1.8rem; font-weight: 700;">Experiência Master</h3>
+                            <i data-lucide="award" style="color: var(--primary); width: 32px; height: 32px;"></i>
                         </div>
-                        <p class="care-desc">O cuidado absoluto. Nada é deixado ao acaso.</p>
-                        <ul class="care-list">
-                            <li><i data-lucide="check"></i> Todos os serviços Revitaliza</li>
-                            <li><i data-lucide="check"></i> Substituição de filtro</li>
-                            <li><i data-lucide="check"></i> Hidratação de capa térmica</li>
-                            <li><i data-lucide="check"></i> Proteção UV das bordas</li>
+                        <p style="opacity: 0.8; margin-bottom: 2rem; font-size: 1.1rem;">O cuidado absoluto. Nada é deixado ao acaso.</p>
+                        <ul style="list-style: none; margin-bottom: 3rem; flex-grow: 1;">
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Todos os serviços Revitaliza</li>
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Substituição de filtro</li>
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Hidratação de capa térmica</li>
+                            <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;"><i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Proteção UV das bordas</li>
                         </ul>
-                        <a href="https://wa.me/5511983225770" class="btn btn-whatsapp btn-full">Solicitar Consultoria</a>
+                        <a href="https://wa.me/5511983225770" class="btn btn-primary btn-full">Solicitar Consultoria</a>
                     </div>
                 </div>
             </div>
@@ -121,12 +147,27 @@
         </section>
 
         <!-- Antes e Depois -->
-        <section class="section before-after">
+        <section class="section before-after" style="background: rgba(255,255,255,0.02);">
             <div class="container text-center">
+                <div class="badge-premium">Diferença Visível</div>
                 <h2 class="section-title">Resultados Impecáveis</h2>
-                <div class="maintenance-grid" style="margin-top: 4rem;">
-                    <img src="/manutenção/manutenção 01.jpeg" alt="Antes" style="border-radius: 20px;">
-                    <img src="/manutenção/manutenção 03.jpeg" alt="Depois" style="border-radius: 20px;">
+                
+                <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin-top: 4rem;">
+                    <!-- Antes -->
+                    <div style="text-align: center;">
+                        <span style="display: block; margin-bottom: 1.5rem; font-family: var(--font-heading); font-weight: 700; letter-spacing: 2px; color: var(--primary); opacity: 0.8;">ANTES</span>
+                        <div class="glass-card" style="padding: 10px; border-radius: 25px;">
+                            <img src="/manutenção/manutenção 01.jpeg" alt="Antes" style="border-radius: 15px; width: 250px; height: 250px; object-fit: contain; background: #000; display: block;">
+                        </div>
+                    </div>
+
+                    <!-- Depois -->
+                    <div style="text-align: center;">
+                        <span style="display: block; margin-bottom: 1.5rem; font-family: var(--font-heading); font-weight: 700; letter-spacing: 2px; color: var(--primary); opacity: 0.8;">DEPOIS</span>
+                        <div class="glass-card" style="padding: 10px; border-radius: 25px;">
+                            <img src="/manutenção/manutenção 03.jpeg" alt="Depois" style="border-radius: 15px; width: 250px; height: 250px; object-fit: contain; background: #000; display: block;">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -134,8 +175,10 @@
         <!-- Footer (Shared) -->
         <footer class="footer">
             <div class="container text-center">
-                <img src="/assets/logo.png" alt="Logo" class="footer-logo">
-                <p>&copy; 2026 Hydro Care. Excelência em Manutenção.</p>
+                <img src="/logo/0101.png" alt="Logo" class="footer-logo">
+                <p>“Você Relaxa, A Gente Cuida.”</p>
+                <div class="camaly-signature">Produzida com 💙 por <a href="https://camaly.com.br/" target="_blank">CAMALY</a></div>
+                <p style="margin-top: 1rem; opacity: 0.5; font-size: 0.8rem;">&copy; 2026 Hydro Care. Excelência em Manutenção.</p>
             </div>
         </footer>
     </div>
@@ -144,5 +187,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
     <script type="module" src="/main.js"></script>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511983225770" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
 </body>
 </html>

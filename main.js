@@ -133,12 +133,10 @@ if (navbar) {
     ScrollTrigger.create({
         start: 'top top',
         onUpdate: (self) => {
-            if (self.scroll() > 10) {
+            if (self.scroll() > 100) {
                 navbar.classList.add('navbar-hidden');
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
             } else {
                 navbar.classList.remove('navbar-hidden');
-                navbar.style.background = 'rgba(255, 255, 255, 0.9)';
             }
         }
     });
