@@ -8,7 +8,6 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         produtos: resolve(__dirname, 'produtos.html'),
         servicos: resolve(__dirname, 'servicos.html'),
-        galeria: resolve(__dirname, 'galeria.html'),
         blog: resolve(__dirname, 'blog.html'),
         contato: resolve(__dirname, 'contato.html'),
         enrolavel: resolve(__dirname, 'enrolavel.html'),
