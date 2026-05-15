@@ -6,19 +6,20 @@
     <title>Capa Enrolável - Hydro Cover</title>
     <meta name="description" content="A praticidade definitiva em capas térmicas. Conheça a Capa Enrolável Hydro Cover.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="/assets/logo.png">
+    <link rel="icon" type="image/png" href="/logo/logo 1.png">
     <link rel="manifest" href="/manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <div class="smooth-wrapper">
-        <!-- Navbar (Shared) -->
+        <!-- Navigation -->
         <nav class="navbar">
-            <div class="nav-content" style="padding: 0 2rem;">
+            <div class="nav-container nav-content">
                 <div class="logo">
                     <a href="index.html">
-                        <img loading="lazy" src="/logo/0101.png" alt="Hydro Cover Logo" class="logo-img">
+                        <img loading="lazy" src="/logo/logo 1.png" alt="Logo" class="logo-img">
                     </a>
                 </div>
                 <div class="nav-links">
@@ -30,7 +31,7 @@
                     <a href="contato.html">CONTATO</a>
                 </div>
                 <div class="nav-cta">
-                    <a href="https://wa.me/5511983225770" class="btn btn-primary">Fale com um especialista</a>
+                    <a href="https://wa.me/5511983225770" class="btn btn-primary"><svg class="wa-icon" style="width: 20px; height: 20px; margin-right: 8px; vertical-align: middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Fale com um Especialista</a>
                 </div>
                 <button class="mobile-menu-btn" aria-label="Abrir Menu">
                     <i data-lucide="menu"></i>
@@ -51,7 +52,7 @@
                     <a href="servicos.html">HYDRO CARE</a>
                     <a href="acessorios.html">ACESSÓRIOS</a>
                     <a href="contato.html">CONTATO</a>
-                    <a href="https://wa.me/5511983225770" class="btn btn-primary">Falar com Especialista</a>
+                    <a href="https://wa.me/5511983225770" class="btn btn-primary">Fale com um Especialista</a>
                 </div>
             </div>
         </div>
@@ -59,12 +60,12 @@
         <!-- Page Header -->
         <header class="page-header">
             <div class="page-header-bg">
-                <img loading="lazy" src="/assets/enrolavel_1.jpg" alt="Background" style="object-fit: cover; background: #000;">
+                <img loading="lazy" src="/assets/fotos-hidro/hidro_16.jpeg" alt="Background" style="object-fit: cover; background: var(--darker);">
             </div>
             <div class="page-header-overlay"></div>
             <div class="container">
                 <div class="badge-premium">Inovação & Praticidade</div>
-                <h1 class="page-title">Capa Enrolável</h1>
+                <h1 class="page-title">Capa Enrolável 🥇</h1>
                 <p class="subheadline">A solução perfeita para quem busca agilidade sem abrir mão do isolamento térmico.</p>
             </div>
         </header>
@@ -75,7 +76,15 @@
                 <div class="product-details-hero text-center" style="max-width: 900px; margin: 0 auto 5rem;">
                     <span class="product-badge">Performance Slim</span>
                     <h2 class="product-title" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem;">Capa Térmica Enrolável</h2>
-                    <p class="product-description" style="font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto 3rem;">Desenvolvida para proporcionar o máximo de praticidade, nossa capa enrolável une tecnologia de ponta com um design minimalista que valoriza seu ambiente.</p>
+                    <p class="product-description" style="font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto 2rem;">Desenvolvida para proporcionar o máximo de praticidade, nossa capa enrolável une tecnologia de ponta com um design minimalista que valoriza seu ambiente.</p>
+                    
+                    <div class="benefits-info-block" style="margin-bottom: 3rem; text-align: center; background: rgba(0, 31, 63, 0.02); padding: 2.5rem; border-radius: 24px; border: 1px solid rgba(0, 31, 63, 0.05);">
+                        <h3 style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 700;">PORQUÊ OPTAR PELA CAPA TÉRMICA ENROLÁVEL EM MEU SPA?</h3>
+                        <h4 style="font-size: 1.2rem; margin-bottom: 1.5rem; opacity: 0.8;">Praticidade, proteção e eficiência térmica</h4>
+                        <p style="line-height: 1.6; opacity: 0.8; margin-bottom: 1rem;">Optar pela Capa Térmica Enrolável em seu spa oferece diversos benefícios. Ela ajuda a conservar a temperatura da água por mais tempo, reduzindo o consumo de energia e facilitando a manutenção diária do spa. Além disso, protege contra sujeira, folhas, insetos e outras impurezas externas.</p>
+                        <p style="line-height: 1.6; opacity: 0.8; margin-bottom: 1rem;">Seu design moderno e funcional proporciona praticidade no manuseio e armazenamento, tornando a abertura e fechamento do spa muito mais simples. A estrutura resistente, aliada à proteção UV e ao acabamento premium, garante maior durabilidade e excelente desempenho tanto em áreas internas quanto externas.</p>
+                        <p style="line-height: 1.6; opacity: 0.8;">Com visual sofisticado e alta eficiência térmica, a Capa Térmica Enrolável une conforto, proteção e elegância para oferecer uma experiência ainda mais completa em seu spa.</p>
+                    </div>
                     
                     <div class="features-horizontal" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 3rem;">
                         <div class="feature-tag"><i data-lucide="check-circle"></i> Rápido manuseio (segundos)</div>
@@ -91,66 +100,115 @@
                     </div>
 
                     <div style="text-align: center; margin-top: 2rem;">
-                        <a href="https://wa.me/5511983225770" class="btn btn-primary" style="display: inline-flex; white-space: nowrap;">Fale com um especialista</a>
+                        <a href="https://wa.me/5511983225770" class="btn btn-primary btn-glow-pulse">
+                            <svg class="wa-icon" style="width: 24px; height: 24px; margin-right: 10px; vertical-align: middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Falar com Especialista
+                        </a>
                     </div>
                 </div>
 
                 <!-- Vitrine Unificada Capa Enrolável (Grade 5x4) -->
                 <div class="product-master-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem; margin-bottom: 6rem;">
                     <!-- Linha 1: Modelos Enroláveis -->
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/enrolavel_1.jpg" alt="Enrolável 1" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/enrolavel_2.jpg" alt="Enrolável 2" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/enrolavel_3.jpg" alt="Enrolável 3" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/enrolavel_4.jpg" alt="Enrolável 4" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/enrolavel_1.jpg" alt="Enrolável 1" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/enrolavel_2.jpg" alt="Enrolável 2" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/enrolavel_3.jpg" alt="Enrolável 3" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/enrolavel_4.jpg" alt="Enrolável 4" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
 
                     <!-- Linha 2: Carousel 1-4 -->
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_1.jpg" alt="Color 1" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_2.jpg" alt="Color 2" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_3.jpg" alt="Color 3" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_4.jpg" alt="Color 4" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_1.jpg" alt="Color 1" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_2.jpg" alt="Color 2" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_3.jpg" alt="Color 3" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_4.jpg" alt="Color 4" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
 
                     <!-- Linha 3: Carousel 5-8 -->
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/fotos-hidro/hidro_17.jpeg" alt="Projeto Exclusivo 1" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_6.jpg" alt="Color 6" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/fotos-hidro/hidro_18.jpeg" alt="Projeto Exclusivo 2" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_8.jpg" alt="Color 8" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/fotos-hidro/hidro_17.jpeg" alt="Projeto Exclusivo 1" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_6.jpg" alt="Color 6" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/fotos-hidro/hidro_18.jpeg" alt="Projeto Exclusivo 2" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_8.jpg" alt="Color 8" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
 
                     <!-- Linha 4: Carousel 9-12 -->
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_9.jpg" alt="Color 9" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_10.jpg" alt="Color 10" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/fotos-hidro/hidro_19.jpeg" alt="Projeto Exclusivo 3" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_12.jpg" alt="Color 12" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_9.jpg" alt="Color 9" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_10.jpg" alt="Color 10" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/fotos-hidro/hidro_19.jpeg" alt="Projeto Exclusivo 3" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_12.jpg" alt="Color 12" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
 
                     <!-- Linha 5: Carousel 13-16 -->
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_13.jpg" alt="Color 13" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/fotos-hidro/hidro_20.jpeg" alt="Projeto Exclusivo 4" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_15.jpg" alt="Color 15" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
-                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_16.jpg" alt="Color 16" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: #000;"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_13.jpg" alt="Color 13" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/fotos-hidro/hidro_20.jpeg" alt="Projeto Exclusivo 4" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_15.jpg" alt="Color 15" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
+                    <div class="grid-item" data-tilt><img loading="lazy" src="/assets/colors/carousel_16.jpg" alt="Color 16" style="border-radius: 15px; width: 100%; height: 220px; object-fit: cover; background: var(--darker);"></div>
                 </div>
 
-                <div class="maintenance-carousel-static" style="margin-top: 4rem;">
-                    <h4 style="text-align: center; margin-bottom: 2rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 2px;">COMO SABER AS MEDIDAS</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-                        <div class="grid-item"><img loading="lazy" src="/manutencao/manutencao_04.jpeg" alt="Medida 1" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; opacity: 0.8; background: #000;"></div>
-                        <div class="grid-item"><img loading="lazy" src="/manutencao/manutencao_05.jpeg" alt="Medida 2" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; opacity: 0.8; background: #000;"></div>
-                        <div class="grid-item"><img loading="lazy" src="/manutencao/manutencao_06.jpeg" alt="Medida 3" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; opacity: 0.8; background: #000;"></div>
-                        <div class="grid-item"><img loading="lazy" src="/manutencao/manutencao_07.jpeg" alt="Medida 4" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; opacity: 0.8; background: #000;"></div>
+                <div class="models-carousel-container" style="margin-top: 4rem;">
+                    <h4 style="text-align: center; margin-bottom: 3rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 2px;">COMO SABER AS MEDIDAS</h4>
+                    <div class="swiper modelsSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><div class="grid-item"><img loading="lazy" src="/Modelos/Quadrada.jpg" alt="Quadrada" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; background: white;"></div></div>
+                            <div class="swiper-slide"><div class="grid-item"><img loading="lazy" src="/Modelos/Retangulo.jpg" alt="Retangulo" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; background: white;"></div></div>
+                            <div class="swiper-slide"><div class="grid-item"><img loading="lazy" src="/Modelos/Redodno.jpg" alt="Redondo" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; background: white;"></div></div>
+                            <div class="swiper-slide"><div class="grid-item"><img loading="lazy" src="/Modelos/Oval.jpg" alt="Oval" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; background: white;"></div></div>
+                            <div class="swiper-slide"><div class="grid-item"><img loading="lazy" src="/Modelos/Oitava.jpg" alt="Oitava" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; background: white;"></div></div>
+                            <div class="swiper-slide"><div class="grid-item"><img loading="lazy" src="/Modelos/Sextava.jpg" alt="Sextava" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; background: white;"></div></div>
+                            <div class="swiper-slide"><div class="grid-item"><img loading="lazy" src="/Modelos/Leque.jpg" alt="Leque" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; background: white;"></div></div>
+                            <div class="swiper-slide"><div class="grid-item"><img loading="lazy" src="/Modelos/Diamante.jpg" alt="Diamante" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; background: white;"></div></div>
+                            <div class="swiper-slide"><div class="grid-item"><img loading="lazy" src="/Modelos/Chanfrada2.jpg" alt="Chanfrada" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; background: white;"></div></div>
+                            <div class="swiper-slide"><div class="grid-item"><img loading="lazy" src="/Modelos/hanfrada.jpg" alt="Chanfrada 2" style="border-radius: 15px; width: 100%; height: 200px; object-fit: contain; background: white;"></div></div>
+                        </div>
+                        <div class="swiper-pagination" style="bottom: -30px;"></div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final (Shared) -->
+        <section class="section cta-final">
+            <div class="container text-center">
+                <h2 class="cta-title">Seu Spa Merece o Melhor Cuidado</h2>
+                <p class="cta-text">Fale agora com um especialista Hydro Cover e descubra a solução ideal.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5511983225770" class="btn btn-whatsapp btn-lg">
+                        <svg class="wa-icon" style="width: 28px; height: 28px; margin-right: 12px; vertical-align: middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Fale com um Especialista
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Footer (Shared) -->
         <footer class="footer">
-            <div class="container text-center">
-                <img loading="lazy" src="/logo/0101.png" alt="Logo" class="footer-logo">
-                <p>“Você Relaxa, A Gente Cuida.”</p>
-                <div class="camaly-signature">Produzida com 💙 por <a href="https://camaly.com.br/" target="_blank">CAMALY</a></div>
-                <p style="margin-top: 1rem; opacity: 0.5; font-size: 0.8rem;">&copy; 2026 Hydro Cover. Praticidade & Inovação.</p>
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Coluna 1: Logo e Slogan -->
+                    <div class="footer-col">
+                        <img loading="lazy" src="/logo/logo 1.png" alt="Hydro Cover" class="footer-logo">
+                        <p class="footer-slogan">“Você Relaxa, A Gente Cuida.”</p>
+                        <div class="camaly-signature">Produzida com 💙 por <a href="https://camaly.com.br/" target="_blank">CAMALY</a></div>
+                    </div>
+                    
+                    <!-- Coluna 2: Atendimento -->
+                    <div class="footer-col">
+                        <h4 style="margin-bottom: 1.5rem; font-family: var(--font-heading); font-weight: 700;">Atendimento</h4>
+                        <p style="margin-bottom: 0.5rem;"><a href="mailto:Hydrocovercare@gmail.com">Hydrocovercare@gmail.com</a></p>
+                        <p><a href="https://instagram.com/_hydrocover" target="_blank">@_hydrocover</a></p>
+                    </div>
+                    
+                    <!-- Coluna 3: Corporativo -->
+                    <div class="footer-col">
+                        <h4 style="margin-bottom: 1.5rem; font-family: var(--font-heading); font-weight: 700;">Corporativo</h4>
+                        <p style="margin-bottom: 0.5rem;">CNPJ: 66.171.924/0001-69</p>
+                        <p>Atendimento Nacional</p>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; opacity: 0.7; font-size: 0.9rem;">
+                    <p>&copy; 2026 Hydro Cover. Todos os direitos reservados.</p>
+                </div>
             </div>
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>

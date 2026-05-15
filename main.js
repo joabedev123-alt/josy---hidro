@@ -171,6 +171,20 @@ if (document.querySelector('.careSwiper')) {
     });
 }
 
+if (document.querySelector('.modelsSwiper')) {
+    new Swiper('.modelsSwiper', {
+        loop: true,
+        autoplay: { delay: 1500, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        slidesPerView: 2,
+        spaceBetween: 20,
+        breakpoints: {
+            768: { slidesPerView: 3, spaceBetween: 25 },
+            1024: { slidesPerView: 5, spaceBetween: 30 }
+        }
+    });
+}
+
 // Initialize GLightbox
 if (document.querySelector('.glightbox')) {
     GLightbox({
