@@ -998,11 +998,9 @@ a {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     align-items: stretch;
-    max-width: 480px;
-    margin: 0 auto;
 }
 
 .pricing-card {
