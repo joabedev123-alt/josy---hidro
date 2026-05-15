@@ -130,14 +130,19 @@ gsap.utils.toArray('[data-parallax]').forEach((container) => {
 // Navbar visibility logic
 const navbar = document.querySelector('.navbar');
 if (navbar) {
+    let lastScroll = 0;
     ScrollTrigger.create({
         start: 'top top',
         onUpdate: (self) => {
-            if (self.scroll() > 100) {
+            const current = self.scroll();
+            if (current > 120 && current > lastScroll) {
+                // rolando para baixo
                 navbar.classList.add('navbar-hidden');
             } else {
+                // rolando para cima ou no topo
                 navbar.classList.remove('navbar-hidden');
             }
+            lastScroll = current;
         }
     });
 }
