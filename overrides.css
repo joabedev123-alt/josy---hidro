@@ -1,6 +1,6 @@
 /* Sincronização Final: 16/05/2026 */
 /* Ajustes para imagens bem pequenas e sem bordas pretas */
-.ad-card, .ad-card-stack .ad-card {
+.ad-card, .ad-stack .ad-card {
     aspect-ratio: auto !important;
     height: auto !important;
     max-width: 180px !important;
@@ -10,7 +10,7 @@
     box-shadow: 0 5px 10px rgba(0,0,0,0.05) !important;
 }
 
-.ad-card img, .ad-card-stack .ad-card img, .rg-item img, .grid-item img {
+.ad-card img, .ad-stack .ad-card img, .rg-item img, .grid-item img {
     object-fit: contain !important;
     width: 100% !important;
     height: auto !important;
@@ -26,10 +26,10 @@
 }
 
 /* Vitrine de produtos continua com preenchimento automático */
-.product-master-grid, .products-grid {
+.product-master-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
-    gap: 1rem !important;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+    gap: 0.8rem !important;
 }
 
 .rg-item, .grid-item {
@@ -119,12 +119,12 @@
 
 /* Redução Drástica da seção de Acessórios */
 #acessorios .product-card-premium {
-    max-width: 240px !important;
+    max-width: 240px !important; /* Reduzido de 300px para 240px */
     margin: 0 auto !important;
 }
 
 #acessorios .pc-image {
-    height: 140px !important;
+    height: 140px !important; /* Reduzido de 180px para 140px */
 }
 
 #acessorios .pc-title {
@@ -179,40 +179,36 @@
 /* --- AJUSTES MOBILE (FINAL) --- */
 @media (max-width: 768px) {
     .section {
-        padding: 1.5rem 0.5rem !important;
+        padding: 1.5rem 0 !important;
     }
     
     .page-header {
         height: auto !important;
-        min-height: 180px !important;
-        padding: 2.5rem 0 !important;
+        min-height: 200px !important;
+        padding: 3rem 0 !important;
     }
 
     .page-title {
-        font-size: 1.4rem !important;
-        margin-bottom: 0.3rem !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
     }
 
-    .ad-card, .ad-card-stack .ad-card {
-        max-width: 130px !important;
+    .ad-card, .ad-stack .ad-card {
+        max-width: 140px !important;
     }
 
-    /* Forçar 2 colunas em todas as galerias de produtos e resultados */
-    .results-photo-grid, .product-master-grid, .products-grid {
+    .results-photo-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+    }
+
+    .product-master-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.5rem !important;
     }
 
     .rg-item img, .grid-item img {
-        height: 110px !important;
-    }
-
-    #acessorios .product-card-premium {
-        max-width: 100% !important; /* Ocupar metade da tela na grid */
-    }
-
-    #acessorios .pc-image {
-        height: 120px !important; /* Menor no mobile */
+        height: 120px !important;
     }
 
     .pricing-grid {
@@ -220,25 +216,20 @@
     }
 
     .section-subtitle {
-        font-size: 0.8rem !important;
-        line-height: 1.3 !important;
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
     }
 
     .why-card {
-        padding: 1rem !important;
+        padding: 1.2rem 1rem !important;
     }
 
     .why-title {
-        font-size: 0.95rem !important;
+        font-size: 1rem !important;
     }
 
     .section-tag {
-        font-size: 0.65rem !important;
-        letter-spacing: 1px !important;
-    }
-    
-    .container {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 1.5px !important;
     }
 }
