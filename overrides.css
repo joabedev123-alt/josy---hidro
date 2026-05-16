@@ -117,18 +117,23 @@
     justify-content: center !important;
 }
 
-/* Redução da seção de Acessórios */
+/* Redução Drástica da seção de Acessórios */
 #acessorios .product-card-premium {
-    max-width: 300px !important; /* Card menor */
+    max-width: 240px !important; /* Reduzido de 300px para 240px */
     margin: 0 auto !important;
 }
 
+#acessorios .pc-image {
+    height: 140px !important; /* Reduzido de 180px para 140px */
+}
+
 #acessorios .pc-title {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
 }
 
 #acessorios .pc-desc {
-    font-size: 0.82rem !important;
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
 }
 
 /* Cor da paginação do Swiper */
