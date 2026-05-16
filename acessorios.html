@@ -71,8 +71,6 @@
                                     <div class="swiper-slide"><img loading="lazy" src="/acessorios/filtro1.jpeg" alt="Filtro 1" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
                                     <div class="swiper-slide"><img loading="lazy" src="/acessorios/filtro2.jpeg" alt="Filtro 2" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
                                     <div class="swiper-slide"><img loading="lazy" src="/acessorios/filtro3.jpeg" alt="Filtro 3" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
-                                    <div class="swiper-slide"><img loading="lazy" src="/acessorios/Aspirador Aquático Manual1.jpeg" alt="Aspirador Manual" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
-                                    <div class="swiper-slide"><img loading="lazy" src="/acessorios/Aspirador Automático Recarregável USB - Para PiscinaSpa1.jpeg" alt="Aspirador Automático" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
                                 </div>
                                 <div class="swiper-pagination"></div>
                             </div>
@@ -90,10 +88,19 @@
                         </div>
                     </div>
                     <div class="product-card-premium">
-                        <div class="pc-image"><img loading="lazy" src="/acessorios/Aspirador Automático Recarregável USB - Para PiscinaSpa1.jpeg" alt="Aspirador" style="object-fit: contain; background: #000;"></div>
+                        <div class="pc-image">
+                            <div class="swiper aspiradorSwiper" style="height: 100%; width: 100%;">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img loading="lazy" src="/acessorios/Aspirador Automático Recarregável USB - Para PiscinaSpa1.jpeg" alt="Aspirador Automático" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
+                                    <div class="swiper-slide"><img loading="lazy" src="/acessorios/Aspirador Aquático Manual1.jpeg" alt="Aspirador Aquático" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
+                                    <div class="swiper-slide"><img loading="lazy" src="/acessorios/Aspirador Automático Recarregável USB - Para PiscinaSpa2.jpeg" alt="Aspirador Automático" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
                         <div class="pc-content">
-                            <h3 class="pc-title">Aspirador Automático</h3>
-                            <p class="pc-desc">Recarregável via USB, ideal para limpeza prática e rápida de spas e ofurôs.</p>
+                            <h3 class="pc-title">Linha de Aspiradores</h3>
+                            <p class="pc-desc">Modelos automáticos e manuais de alta eficiência para manter seu spa sempre impecável.</p>
                         </div>
                     </div>
                 </div>
@@ -163,6 +170,17 @@
             },
             autoplay: {
                 delay: 3000,
+            },
+        });
+
+        new Swiper('.aspiradorSwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3500,
             },
         });
     </script>
