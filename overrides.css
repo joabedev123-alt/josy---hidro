@@ -119,12 +119,12 @@
 
 /* Redução Drástica da seção de Acessórios */
 #acessorios .product-card-premium {
-    max-width: 240px !important; /* Reduzido de 300px para 240px */
+    max-width: 240px !important;
     margin: 0 auto !important;
 }
 
 #acessorios .pc-image {
-    height: 140px !important; /* Reduzido de 180px para 140px */
+    height: 140px !important;
 }
 
 #acessorios .pc-title {
@@ -176,60 +176,132 @@
     color: #ffffff !important;
 }
 
-/* --- AJUSTES MOBILE (FINAL) --- */
+/* --- OTIMIZAÇÃO MOBILE EXTREMA --- */
 @media (max-width: 768px) {
-    .section {
-        padding: 1.5rem 0 !important;
+    /* Paddings globais reduzidos para mobile */
+    .section, .pricing-section, .process-section, .before-after, .testimonials-section, .product-category-section {
+        padding: 1.5rem 0.5rem !important;
     }
     
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Ajuste de Hero Mobile */
     .page-header {
         height: auto !important;
-        min-height: 200px !important;
-        padding: 3rem 0 !important;
+        min-height: 180px !important;
+        padding: 2.5rem 0 !important;
     }
 
     .page-title {
-        font-size: 1.5rem !important;
+        font-size: 1.4rem !important;
         margin-bottom: 0.5rem !important;
+        line-height: 1.2 !important;
     }
 
-    .ad-card, .ad-stack .ad-card {
-        max-width: 140px !important;
+    .subheadline {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        opacity: 0.9 !important;
     }
 
-    .results-photo-grid {
+    /* Grids Mobile: Sempre 2 colunas para manter densidade */
+    .results-photo-grid, 
+    .results-video-grid,
+    .product-master-grid, 
+    .products-grid,
+    .why-us-grid,
+    .pricing-grid {
+        display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.5rem !important;
+        gap: 0.8rem !important;
     }
 
-    .product-master-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.5rem !important;
+    /* Ajuste para grids que devem empilhar (texto + imagem) */
+    .history-grid, .cta-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    /* Ajuste de cards em 2 colunas */
+    .product-card-premium, 
+    .pricing-card, 
+    .why-card {
+        max-width: 100% !important;
+        padding: 1rem !important;
+        border-radius: 15px !important;
+        height: auto !important;
+    }
+
+    #acessorios .pc-image {
+        height: 110px !important; /* Menor no mobile para caber 2 em linha */
     }
 
     .rg-item img, .grid-item img {
-        height: 120px !important;
+        height: 100px !important;
     }
 
-    .pricing-grid {
-        gap: 1rem !important;
-    }
-
-    .section-subtitle {
-        font-size: 0.85rem !important;
-        line-height: 1.4 !important;
-    }
-
-    .why-card {
-        padding: 1.2rem 1rem !important;
-    }
-
-    .why-title {
-        font-size: 1rem !important;
+    /* Tipografia Mobile */
+    .section-title {
+        font-size: 1.3rem !important;
+        margin-bottom: 1rem !important;
     }
 
     .section-tag {
-        font-size: 0.7rem !important;
-        letter-spacing: 1.5px !important;
+        font-size: 0.65rem !important;
+        letter-spacing: 1.2px !important;
+    }
+
+    .pc-title, .pricing-title, .why-title {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.4rem !important;
+    }
+
+    .pc-desc, .pricing-desc, .why-text, .cta-text, .why-bullets li {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+
+    /* Botões Mobile */
+    .btn-lg {
+        padding: 0.8rem 1rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Navbar Mobile */
+    .navbar {
+        padding: 0.5rem 0 !important;
+    }
+
+    .logo-img {
+        height: 35px !important;
+    }
+
+    /* Footer Mobile */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        gap: 2rem !important;
+    }
+
+    .footer-col h4 {
+        margin-bottom: 1rem !important;
+    }
+
+    /* Vídeos mobile */
+    .rv-item video {
+        border-radius: 10px !important;
+        height: 200px !important;
+        object-fit: cover !important;
+    }
+}
+
+/* Ajuste para telas muito pequenas (iPhone SE, etc) */
+@media (max-width: 480px) {
+    .pricing-grid, .why-us-grid {
+        grid-template-columns: 1fr !important; /* Volta para 1 coluna se for pequeno demais para cards complexos */
     }
 }
