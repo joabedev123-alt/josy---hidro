@@ -16,17 +16,37 @@
     background: transparent !important;
 }
 
-/* Galeria de resultados e Vitrine de produtos com imagens bem pequenas */
-.results-photo-grid, .product-master-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
-    gap: 0.5rem !important;
+/* Galeria de resultados com 4 colunas fixas no desktop */
+.results-photo-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+    align-items: center !important;
+}
+
+/* Vitrine de produtos continua com preenchimento automático */
+.product-master-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+    gap: 0.8rem !important;
+}
+
+.rg-item, .grid-item {
+    aspect-ratio: auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    height: auto !important;
 }
 
 .rg-item img, .grid-item img {
-    height: 110px !important; /* Tamanho reduzido para todas as grades */
+    height: 150px !important;
+    width: auto !important;
+    max-width: 100% !important;
     object-fit: contain !important;
     background: transparent !important;
-    border-radius: 8px !important;
+    border-radius: 10px !important;
+    display: block;
+    margin: 0 auto;
 }
 
 /* Rótulos de seção sem forma de botão */
@@ -41,10 +61,59 @@
     text-align: center;
 }
 
-/* Forçar legenda/subtítulo em uma única linha */
-.section-subtitle {
+/* Forçar legenda/subtítulo em uma única linha no desktop */
+.section-subtitle, .pricing-header {
     max-width: none !important;
     white-space: normal !important;
+}
+
+/* Diminuir drasticamente espaços entre seções */
+.section, .pricing-section, .process-section, .before-after, .testimonials-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+.pricing-header {
+    margin-top: 0 !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Redução dos cards de serviços */
+.pricing-card {
+    padding: 1.8rem 1.5rem !important;
+    border-radius: 20px !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+}
+
+.pricing-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+.pricing-tier {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.8rem !important;
+}
+
+.pricing-features li {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.6rem !important;
+}
+
+.pricing-desc {
+    font-size: 0.85rem !important;
+    margin-bottom: 1.2rem !important;
+}
+
+/* Botões dos cards em uma única linha */
+.pricing-card .btn {
+    white-space: nowrap !important;
+    font-size: 0.8rem !important;
+    padding: 0.8rem 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 /* Redução dos cards da seção Quem Somos */
@@ -82,17 +151,60 @@
     color: #ffffff !important;
 }
 
+/* --- AJUSTES MOBILE (FINAL) --- */
 @media (max-width: 768px) {
+    .section {
+        padding: 1.5rem 0 !important; /* Espaçamento ainda menor no mobile */
+    }
+    
+    .page-header {
+        height: auto !important;
+        min-height: 200px !important;
+        padding: 3rem 0 !important;
+    }
+
+    .page-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
     .ad-card, .ad-stack .ad-card {
-        max-width: 150px !important;
+        max-width: 140px !important;
     }
-    .results-photo-grid, .product-master-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
+
+    .results-photo-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
     }
+
+    .product-master-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem !important;
+    }
+
+    .rg-item img, .grid-item img {
+        height: 120px !important; /* Um pouco menor no mobile */
+    }
+
+    .pricing-grid {
+        gap: 1rem !important;
+    }
+
     .section-subtitle {
-        font-size: 0.9rem !important;
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
     }
+
     .why-card {
         padding: 1.2rem 1rem !important;
+    }
+
+    .why-title {
+        font-size: 1rem !important;
+    }
+
+    .section-tag {
+        font-size: 0.7rem !important;
+        letter-spacing: 1.5px !important;
     }
 }
