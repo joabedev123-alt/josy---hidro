@@ -1,16 +1,4 @@
 /* Sincronização Final: 16/05/2026 */
-
-/* Glightbox: garante que o <a> dentro de grid-item ocupe o espaço total */
-.grid-item a.glightbox {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.grid-item a.glightbox img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 /* Ajustes para imagens bem pequenas e sem bordas pretas */
 .ad-card, .ad-stack .ad-card {
     aspect-ratio: auto !important;
@@ -129,6 +117,25 @@
     justify-content: center !important;
 }
 
+/* Redução da seção de Acessórios */
+#acessorios .product-card-premium {
+    max-width: 300px !important; /* Card menor */
+    margin: 0 auto !important;
+}
+
+#acessorios .pc-title {
+    font-size: 1.1rem !important;
+}
+
+#acessorios .pc-desc {
+    font-size: 0.82rem !important;
+}
+
+/* Cor da paginação do Swiper */
+.swiper-pagination-bullet-active {
+    background: var(--primary) !important;
+}
+
 /* Redução dos cards da seção Quem Somos */
 .why-card {
     padding: 1.8rem 1.5rem !important;
@@ -167,7 +174,7 @@
 /* --- AJUSTES MOBILE (FINAL) --- */
 @media (max-width: 768px) {
     .section {
-        padding: 1.5rem 0 !important; /* Espaçamento ainda menor no mobile */
+        padding: 1.5rem 0 !important;
     }
     
     .page-header {
@@ -196,7 +203,7 @@
     }
 
     .rg-item img, .grid-item img {
-        height: 120px !important; /* Um pouco menor no mobile */
+        height: 120px !important;
     }
 
     .pricing-grid {

@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="/logo/logo 1.png">
     <link rel="manifest" href="/manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -64,11 +65,14 @@
             <div class="container">
                 <div class="products-grid">
                     <div class="product-card-premium">
-                        <div class="pc-image">
-                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; padding: 10px; background: #000; height: 220px;">
-                                <img loading="lazy" src="/acessorios/filtro1.jpeg" alt="Filtro 1" style="width: 100%; height: 100%; object-fit: contain;">
-                                <img loading="lazy" src="/acessorios/filtro2.jpeg" alt="Filtro 2" style="width: 100%; height: 100%; object-fit: contain;">
-                                <img loading="lazy" src="/acessorios/filtro3.jpeg" alt="Filtro 3" style="width: 100%; height: 100%; object-fit: contain;">
+                        <div class="pc-image" style="height: 180px;">
+                            <div class="swiper filterSwiper" style="height: 100%; width: 100%;">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img loading="lazy" src="/acessorios/filtro1.jpeg" alt="Filtro 1" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
+                                    <div class="swiper-slide"><img loading="lazy" src="/acessorios/filtro2.jpeg" alt="Filtro 2" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
+                                    <div class="swiper-slide"><img loading="lazy" src="/acessorios/filtro3.jpeg" alt="Filtro 3" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
                         </div>
                         <div class="pc-content">
@@ -141,12 +145,24 @@
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
     <script type="module" src="/main.js"></script>
     <script>
         lucide.createIcons();
+        
+        new Swiper('.filterSwiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
     </script>
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/5511983225770" class="whatsapp-float" target="_blank" aria-label="Fale conosco no WhatsApp">
