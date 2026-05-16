@@ -1,4 +1,16 @@
 /* Sincronização Final: 16/05/2026 */
+
+/* Glightbox: garante que o <a> dentro de grid-item ocupe o espaço total */
+.grid-item a.glightbox {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.grid-item a.glightbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /* Ajustes para imagens bem pequenas e sem bordas pretas */
 .ad-card, .ad-stack .ad-card {
     aspect-ratio: auto !important;

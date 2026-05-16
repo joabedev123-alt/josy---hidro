@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./overrides.css">
     <link rel="stylesheet" href="./overrides.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <div id="app">
@@ -105,19 +106,19 @@
                     <h2 class="section-title">Proteção & Performance</h2>
                 </div>
                 <div class="products-grid">
-                    <div class="product-card-premium">
+                    <div class="product-card-premium" style="display:flex;flex-direction:column;">
                         <div class="pc-image"><img loading="lazy" src="/assets/tampao_1.jpg" alt="Tampão Térmico"></div>
-                        <div class="pc-content">
+                        <div class="pc-content" style="display:flex;flex-direction:column;flex:1;">
                             <h3 class="pc-title">Tampão Térmico</h3>
-                            <p class="pc-desc">A solução definitiva para economia de energia e retenção de calor. Design robusto com acabamento de alta costura e durabilidade extrema.</p>
+                            <p class="pc-desc" style="flex:1;">A solução definitiva para economia de energia e retenção de calor. Design robusto com acabamento de alta costura e durabilidade extrema.</p>
                             <a href="produtos.html#tampao" class="btn btn-outline btn-full">Conhecer Tampão</a>
                         </div>
                     </div>
-                    <div class="product-card-premium">
+                    <div class="product-card-premium" style="display:flex;flex-direction:column;">
                         <div class="pc-image"><img loading="lazy" src="/assets/enrolavel_1.jpg" alt="Capa Enrolável"></div>
-                        <div class="pc-content">
+                        <div class="pc-content" style="display:flex;flex-direction:column;flex:1;">
                             <h3 class="pc-title">Capa Enrolável</h3>
-                            <p class="pc-desc">Praticidade incomparável para o dia a dia. Sistema de rolagem suave que une segurança e sofisticação em um só produto.</p>
+                            <p class="pc-desc" style="flex:1;">Praticidade incomparável para o dia a dia. Sistema de rolagem suave que une segurança e sofisticação em um só produto.</p>
                             <a href="enrolavel.html" class="btn btn-outline btn-full">Conhecer Capa Enrolável</a>
                         </div>
                     </div>
@@ -511,8 +512,8 @@
                     <!-- Coluna 2: Atendimento -->
                     <div class="footer-col">
                         <h4 style="margin-bottom: 1.5rem; font-family: var(--font-heading); font-weight: 700;">Atendimento</h4>
-                        <p style="margin-bottom: 0.5rem;"><a href="mailto:Hydrocovercare@gmail.com">Hydrocovercare@gmail.com</a></p>
-                        <p><a href="https://instagram.com/_hydrocover" target="_blank">@_hydrocover</a></p>
+                        <p style="margin-bottom: 0.75rem;"><a href="mailto:Hydrocovercare@gmail.com" style="display:inline-flex;align-items:center;gap:0.5rem;"><i data-lucide="mail" style="width:16px;height:16px;flex-shrink:0;"></i>Hydrocovercare@gmail.com</a></p>
+                        <p><a href="https://instagram.com/_hydrocover" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@_hydrocover</a></p>
                     </div>
                     
                     <!-- Coluna 3: Corporativo -->
@@ -541,6 +542,7 @@
     <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script type="module" src="/main.js"></script>
+    <script>lucide.createIcons();</script>
 
     <!-- FAQ Accordion -->
     <script>
