@@ -9,21 +9,21 @@
     box-shadow: 0 5px 10px rgba(0,0,0,0.05) !important;
 }
 
-.ad-card img, .ad-stack .ad-card img {
+.ad-card img, .ad-stack .ad-card img, .rg-item img, .grid-item img {
     object-fit: contain !important;
     width: 100% !important;
     height: auto !important;
     background: transparent !important;
 }
 
-/* Galeria de resultados com imagens bem pequenas */
-.results-photo-grid {
+/* Galeria de resultados e Vitrine de produtos com imagens bem pequenas */
+.results-photo-grid, .product-master-grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
     gap: 0.5rem !important;
 }
 
-.rg-item img {
-    height: 110px !important;
+.rg-item img, .grid-item img {
+    height: 110px !important; /* Tamanho reduzido para todas as grades */
     object-fit: contain !important;
     background: transparent !important;
     border-radius: 8px !important;
@@ -86,7 +86,7 @@
     .ad-card, .ad-stack .ad-card {
         max-width: 150px !important;
     }
-    .results-photo-grid {
+    .results-photo-grid, .product-master-grid {
         grid-template-columns: repeat(4, 1fr) !important;
     }
     .section-subtitle {
