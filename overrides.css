@@ -79,52 +79,12 @@
     margin-bottom: 2rem !important;
 }
 
-/* Redução dos cards de serviços */
-.pricing-card {
-    padding: 1.8rem 1.5rem !important;
-    border-radius: 20px !important;
-    max-width: 320px !important;
-    margin: 0 auto !important;
-}
-
-.pricing-title {
-    font-size: 1.3rem !important;
-    margin-bottom: 0.8rem !important;
-}
-
-.pricing-tier {
-    font-size: 0.75rem !important;
-    padding: 0.3rem 0.8rem !important;
-}
-
-.pricing-features li {
-    font-size: 0.85rem !important;
-    margin-bottom: 0.6rem !important;
-}
-
-.pricing-desc {
-    font-size: 0.85rem !important;
-    margin-bottom: 1.2rem !important;
-}
-
-/* Botões dos cards em uma única linha */
+/* Botões dos cards de serviços */
 .pricing-card .btn {
     white-space: nowrap !important;
-    font-size: 0.8rem !important;
-    padding: 0.8rem 1rem !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-}
-
-/* Redução Drástica da seção de Acessórios */
-#acessorios .product-card-premium {
-    max-width: 240px !important;
-    margin: 0 auto !important;
-}
-
-#acessorios .pc-image {
-    height: 140px !important;
 }
 
 #acessorios .pc-title {
