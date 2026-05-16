@@ -1,0 +1,98 @@
+/* Ajustes para imagens bem pequenas e sem bordas pretas */
+.ad-card, .ad-stack .ad-card {
+    aspect-ratio: auto !important;
+    height: auto !important;
+    max-width: 180px !important;
+    margin: 0 auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05) !important;
+}
+
+.ad-card img, .ad-stack .ad-card img {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: auto !important;
+    background: transparent !important;
+}
+
+/* Galeria de resultados com imagens bem pequenas */
+.results-photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+    gap: 0.5rem !important;
+}
+
+.rg-item img {
+    height: 110px !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    border-radius: 8px !important;
+}
+
+/* Rótulos de seção sem forma de botão */
+.section-tag {
+    color: #38bdf8;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem !important;
+    display: block;
+    text-align: center;
+}
+
+/* Forçar legenda/subtítulo em uma única linha */
+.section-subtitle {
+    max-width: none !important;
+    white-space: normal !important;
+}
+
+/* Redução dos cards da seção Quem Somos */
+.why-card {
+    padding: 1.8rem 1.5rem !important;
+    border-radius: 20px !important;
+    gap: 0.8rem !important;
+}
+
+.why-title {
+    font-size: 1.1rem !important;
+}
+
+.why-text {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+}
+
+.why-bullets li {
+    font-size: 0.82rem !important;
+}
+
+.why-icon-wrap svg {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+/* Fundo do rodapé azul marinho */
+.footer {
+    background: #001f3f !important;
+    color: #ffffff !important;
+}
+
+.footer a, .footer p, .footer h4 {
+    color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+    .ad-card, .ad-stack .ad-card {
+        max-width: 150px !important;
+    }
+    .results-photo-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+    .section-subtitle {
+        font-size: 0.9rem !important;
+    }
+    .why-card {
+        padding: 1.2rem 1rem !important;
+    }
+}
