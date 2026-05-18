@@ -99,14 +99,15 @@ gsap.utils.toArray('.glass-card, .pricing-card').forEach((card, i) => {
     gsap.from(card, {
         scrollTrigger: {
             trigger: card,
-            start: 'top 85%',
-            toggleActions: 'play none none reverse'
+            start: 'top 90%',
+            toggleActions: 'play none none none'
         },
         y: 40,
-        opacity: 0.2,
+        opacity: 0,
         duration: 0.8,
         ease: 'power3.out',
-        delay: i * 0.1
+        delay: i * 0.1,
+        immediateRender: false
     });
 });
 
