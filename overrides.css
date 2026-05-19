@@ -175,24 +175,6 @@
         padding-right: 1rem !important;
     }
 
-    /* Ajuste de Hero Mobile */
-    .page-header {
-        height: auto !important;
-        min-height: 180px !important;
-        padding: 2.5rem 0 !important;
-    }
-
-    .page-title {
-        font-size: 1.4rem !important;
-        margin-bottom: 0.5rem !important;
-        line-height: 1.2 !important;
-    }
-
-    .subheadline {
-        font-size: 0.85rem !important;
-        line-height: 1.4 !important;
-        opacity: 0.9 !important;
-    }
 
     /* Grids Mobile: Sempre 2 colunas para manter densidade */
     .results-photo-grid, 

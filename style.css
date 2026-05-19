@@ -4391,12 +4391,12 @@ html, body { overflow-x: hidden; max-width: 100vw; }
         padding: 0.35rem 0.9rem;
         margin-bottom: 1rem;
     }
-    /* Todas as imagens de fundo do hero sem corte */
+    /* Todas as imagens de fundo do hero cobrindo a área sem faixas pretas */
     .page-header-bg {
         background: #050d1a;
     }
     .page-header-bg img {
-        object-fit: contain !important;
+        object-fit: cover !important;
         object-position: center center !important;
         background: #050d1a;
     }
