@@ -10,7 +10,7 @@
     box-shadow: 0 5px 10px rgba(0,0,0,0.05) !important;
 }
 
-.ad-card img, .ad-stack .ad-card img, .rg-item img, .grid-item img {
+.ad-card img, .ad-stack .ad-card img, .grid-item img {
     object-fit: contain !important;
     width: 100% !important;
     height: auto !important;
@@ -21,8 +21,8 @@
 .results-photo-grid {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
-    gap: 1rem !important;
-    align-items: center !important;
+    gap: 1.2rem !important;
+    align-items: stretch !important;
 }
 
 /* Vitrine de produtos continua com preenchimento automático */
@@ -32,14 +32,14 @@
     gap: 0.8rem !important;
 }
 
-.rg-item, .grid-item {
+.grid-item {
     aspect-ratio: auto !important;
     background: transparent !important;
     box-shadow: none !important;
     height: auto !important;
 }
 
-.rg-item img, .grid-item img {
+.grid-item img {
     height: 150px !important;
     width: auto !important;
     max-width: 100% !important;
@@ -48,6 +48,33 @@
     border-radius: 10px !important;
     display: block;
     margin: 0 auto;
+}
+
+.rg-item {
+    aspect-ratio: 4/3 !important;
+    height: auto !important;
+    overflow: hidden !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15) !important;
+}
+
+.rg-item img {
+    height: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.5s ease !important;
+}
+
+.rg-item:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* Ajuste dos vídeos para ficarem inteiros sem cortes */
+.rv-item video {
+    object-fit: contain !important;
+    background-color: #000 !important;
 }
 
 /* Rótulos de seção sem forma de botão */
@@ -200,8 +227,19 @@
         height: 110px !important; /* Menor no mobile para caber 2 em linha */
     }
 
-    .rg-item img, .grid-item img {
+    .grid-item img {
         height: 100px !important;
+    }
+
+    .rg-item {
+        aspect-ratio: 4/3 !important;
+        height: auto !important;
+    }
+
+    .rg-item img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
     }
 
     /* Tipografia Mobile */
@@ -255,7 +293,7 @@
     .rv-item video {
         border-radius: 10px !important;
         height: 200px !important;
-        object-fit: cover !important;
+        object-fit: contain !important;
     }
 }
 
