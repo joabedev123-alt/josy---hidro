@@ -1049,7 +1049,7 @@ a {
     color: var(--primary);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     display: block;
 }
 
@@ -1057,7 +1057,7 @@ a {
     font-family: var(--font-heading);
     font-size: 2.2rem;
     font-weight: 800;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     color: white;
 }
 
@@ -1065,12 +1065,12 @@ a {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .pricing-features {
     list-style: none;
-    margin-bottom: 3rem;
+    margin-bottom: 1.8rem;
     flex-grow: 1;
 }
 
@@ -1078,7 +1078,7 @@ a {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.6rem;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -4483,11 +4483,11 @@ html, body { overflow-x: hidden; max-width: 100vw; }
         padding: 1.8rem 1.4rem !important;
         border-radius: 20px !important;
     }
-    .pricing-tier           { font-size: 0.75rem; letter-spacing: 1.5px; }
-    .pricing-title          { font-size: clamp(1.3rem, 5vw, 1.8rem) !important; margin-bottom: 0.8rem; }
-    .pricing-desc           { font-size: 0.88rem; margin-bottom: 1.5rem; }
-    .pricing-features       { margin-bottom: 1.8rem; }
-    .pricing-features li    { font-size: 0.88rem; margin-bottom: 0.8rem; gap: 0.7rem; }
+    .pricing-tier           { font-size: 0.75rem; letter-spacing: 1.5px; margin-bottom: 0.4rem; }
+    .pricing-title          { font-size: clamp(1.3rem, 5vw, 1.8rem) !important; margin-bottom: 0.5rem; }
+    .pricing-desc           { font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.4; }
+    .pricing-features       { margin-bottom: 1.2rem; }
+    .pricing-features li    { font-size: 0.88rem; margin-bottom: 0.5rem; gap: 0.7rem; }
     .pricing-cta .btn       { width: 100%; text-align: center; justify-content: center; padding: 0.85rem 1rem; font-size: 0.88rem; }
 
     /* Process steps */
