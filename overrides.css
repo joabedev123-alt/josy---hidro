@@ -285,3 +285,8 @@
         grid-template-columns: 1fr !important; /* Volta para 1 coluna se for pequeno demais para cards complexos */
     }
 }
+
+/* Menu Mobile: Cor dos links em branco */
+.mobile-nav-links a {
+    color: #ffffff !important;
+}
